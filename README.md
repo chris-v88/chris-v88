@@ -10,6 +10,9 @@ I'm `Chris || Viet-Tu` ✨
 * [Cybersoft's Full-Stack Development Program](https://cybersoft.edu.vn) (July 2025 - Present)
   * Front-end: ReactJS, TypeScript, React Hook, NextJS, CTDL, Bootstrap and Sass/Scss
   * BackEnd: NodeJS, ExpressJS, MySQL, TablePlus, Docker, NestJS, NextJS, Prisma, Sequelize), MVC architecture
+* [FUNiX's Automotive Application Developer](https://funix.edu.vn/funix-program/lap-trinh-phan-mem-o-to-automotive-app-developer/) (December 2025 - Present)
+  * Front-end: ReactJS, TypeScript, React Hook, NextJS, CTDL, Bootstrap and Sass/Scss
+  * BackEnd: NodeJS, ExpressJS, MySQL, TablePlus, Docker, NestJS, NextJS, Prisma, Sequelize), MVC architecture
 
 ### 💼 Technical Aspects
 - Daily learning & working with `JavaScript`/`TypeScript` and `React`
