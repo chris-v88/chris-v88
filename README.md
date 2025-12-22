@@ -15,16 +15,17 @@ I'm `Chris || Viet-Tu` ✨
   * Using Qt to build Automation Application
 
 ### 💼 Technical Aspects
-- Daily learning & working with `JavaScript`/`TypeScript` and `React`
-- Automating daily tasks with `Bash` and `Python`
-- Weekend fun with CEH and friends -- still have a lot to learn!
+- Daily working with `JavaScript`/`TypeScript` and `React`
+- Automating daily tasks with `Bash` script
+- Practicing daily programming and math with C++
+- Enjoy applying Linux commands in random occasion
 
 ### 🌱 Non-tech Aspects
 - Music composing on piano and Logic Pro X is fun when it doesn't involve deadline
 - Doing nothing is also fun lol
 
 ### ＠ Socials
-* email : <img style="pointer-events: none;" width="150" alt="v o c h r i s 8 1 @ g m a i l . c o m" src="https://github.com/chrisvo81/chrisvo81/assets/20401958/32569dd4-d7c2-48fc-8716-9d40ba84d6bd">
+* email : <img style="pointer-events: none;" width="150" alt="v o c h r i s 8 1 @ g m a i l . c o m" src="https://github.com/chris-v88/chris-v88/assets/20401958/32569dd4-d7c2-48fc-8716-9d40ba84d6bd">
 * linkedin : [@chrisvo3](https://www.linkedin.com/in/chrisvo3/)
 
 **"Keep on learning"**
