@@ -3,7 +3,7 @@
 I'm `Chris || Viet-Tu` ✨
 
 ### 📚 Education
-* [LaSalle University](https://www.lasalle.edu) (Graduated : May 2019)
+* [LaSalle University](https://www.lasalle.edu) (May 2019)
   * Computer Science Major
 * [PerScholas's Java Development Program](https://perscholas.org/courses/full-stack-java-developer/full-stack-java-developer-powered-by-teksystems-philly/) (November 2019 - March 2020)
   * Java (Maven), Spring boot, SQL (MariaDB), MVC architecture
