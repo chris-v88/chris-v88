@@ -7,7 +7,7 @@ I'm `Chris || Viet-Tu` ✨
   * Computer Science Major
 * [PerScholas's Java Development Program](https://perscholas.org/courses/full-stack-java-developer/full-stack-java-developer-powered-by-teksystems-philly/) (November 2019 - March 2020)
   * Java (Maven), Spring boot, SQL (MariaDB), MVC architecture
-* [Cybersoft's Full-Stack Development Program](https://cybersoft.edu.vn) (July 2025 - Present)
+* [Cybersoft's Full-Stack Development Program](https://cybersoft.edu.vn) (July 2025 - December 2025)
   * Front-end: ReactJS, TypeScript, React Hook, NextJS, CTDL, Bootstrap and Sass/Scss
   * BackEnd: NodeJS, ExpressJS, MySQL, TablePlus, Docker, NestJS, NextJS, Prisma, Sequelize), MVC architecture
 * [FUNiX's Automotive Application Developer](https://funix.edu.vn/funix-program/lap-trinh-phan-mem-o-to-automotive-app-developer/) (December 2025 - Present)
