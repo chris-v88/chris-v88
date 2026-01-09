@@ -1,4 +1,5 @@
 import { Icon } from './Icon';
+import { formatDate } from '../../utils/helpers';
 
 export type Project = {
   id: string;
@@ -20,16 +21,11 @@ export type ProjectCardProps = {
 
 export const ProjectCard = (props: ProjectCardProps) => {
   const { project, onClick } = props;
-  const formatDate = (date: string | null) => {
-    if (!date) return 'Present';
-    const [year, month] = date.split('-');
-    return `${month}/${year}`;
-  };
 
   const statusColors = {
-    completed: 'bg-green-100 text-green-800',
-    'in-progress': 'bg-blue-100 text-blue-800',
-    planned: 'bg-gray-100 text-gray-800',
+    completed: 'bg-green-900 text-green-200',
+    'in-progress': 'bg-blue-900 text-blue-200',
+    planned: 'bg-gray-700 text-gray-300',
   };
 
   const statusLabels = {
@@ -40,10 +36,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+      className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
       onClick={onClick}
     >
-      <div className="aspect-video bg-gray-200 overflow-hidden">
+      <div className="aspect-video bg-gray-700 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
@@ -52,13 +48,13 @@ export const ProjectCard = (props: ProjectCardProps) => {
       </div>
       <div className="p-6">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+          <h3 className="text-xl font-bold text-gray-100">{project.title}</h3>
           <span className={`px-2 py-1 rounded text-xs font-medium ${statusColors[project.status]}`}>
             {statusLabels[project.status]}
           </span>
         </div>
 
-        <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+        <p className="text-gray-400 mb-4 line-clamp-2">{project.description}</p>
 
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
           <Icon name="Calendar" size="sm" />
@@ -69,7 +65,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.slice(0, 3).map((tech) => (
-            <span key={tech} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+            <span key={tech} className="bg-blue-900 text-blue-200 px-2 py-1 rounded text-xs">
               {tech}
             </span>
           ))}
@@ -84,7 +80,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-1 text-gray-300 hover:text-blue-400 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               <Icon name="Github" size="sm" />
@@ -96,7 +92,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-gray-700 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-1 text-gray-300 hover:text-blue-400 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               <Icon name="ExternalLink" size="sm" />

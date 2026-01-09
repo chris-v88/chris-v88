@@ -13,17 +13,21 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="shadow-md fixed top-0 left-0 right-0 z-40">
+    <header className="shadow-md fixed top-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-90">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold">
+          <a href="#" className="text-2xl font-bold text-gray-100">
             {aboutData.name}
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="font-medium">
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-medium text-gray-300 hover:text-gray-100 transition-colors"
+              >
                 {link.label}
               </a>
             ))}
@@ -31,7 +35,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -41,9 +45,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t">
+          <div className="md:hidden mt-4 py-4 border-t border-gray-700">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="block py-2 font-medium">
+              <a
+                key={link.href}
+                href={link.href}
+                className="block py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors"
+              >
                 {link.label}
               </a>
             ))}

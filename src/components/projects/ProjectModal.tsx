@@ -18,22 +18,22 @@ export const ProjectModal = (props: ProjectModalProps) => {
         <img src={project.image} alt={project.title} className="w-full rounded-lg shadow-md" />
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Description</h3>
-          <p className="text-gray-700 leading-relaxed">{project.description}</p>
+          <h3 className="text-lg font-semibold text-gray-100 mb-2">Description</h3>
+          <p className="text-gray-300 leading-relaxed">{project.description}</p>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Timeline</h3>
-          <p className="text-gray-700">
+          <h3 className="text-lg font-semibold text-gray-100 mb-2">Timeline</h3>
+          <p className="text-gray-300">
             {formatDate(project.startDate)} - {formatDate(project.endDate)}
           </p>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Technologies</h3>
+          <h3 className="text-lg font-semibold text-gray-100 mb-2">Technologies</h3>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+              <span key={tech} className="bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm">
                 {tech}
               </span>
             ))}
