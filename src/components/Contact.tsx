@@ -1,12 +1,5 @@
 import aboutData from '../data/about.json';
-import { Icon, Button } from './ui';
-
-export type ContactFormData = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
+import { Icon } from './ui';
 
 const Contact = () => {
   const { email, location, linkedin, github } = aboutData;
@@ -19,15 +12,17 @@ const Contact = () => {
           Have a question or want to work together? Feel free to reach out!
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Information */}
-          <div className="bg-gray-800 rounded-lg shadow-md p-8">
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Contact Information</h3>
+          <div className="bg-gray-800 rounded-lg shadow-md p-6">
+            <h3 className="text-2xl font-bold text-gray-100 mb-6 text-center">
+              Contact Information
+            </h3>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <Icon name="Mail" />
-                <div>
+                <div className="text-center">
                   <h4 className="font-semibold text-gray-100">Email</h4>
                   <a href={`mailto:${email}`} className="text-blue-400 hover:text-blue-300">
                     {email}
@@ -35,17 +30,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <Icon name="MapPin" />
-                <div>
+                <div className="text-center">
                   <h4 className="font-semibold text-gray-100">Location</h4>
                   <p className="text-gray-400">{location}</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <Icon name="Linkedin" />
-                <div>
+                <div className="text-center">
                   <h4 className="font-semibold text-gray-100">LinkedIn</h4>
                   <a
                     href={linkedin}
@@ -58,9 +53,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-center justify-center gap-4">
                 <Icon name="Github" />
-                <div>
+                <div className="text-center">
                   <h4 className="font-semibold text-gray-100">GitHub</h4>
                   <a
                     href={github}
@@ -73,70 +68,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-gray-800 rounded-lg shadow-md p-8">
-            <h3 className="text-2xl font-bold text-gray-100 mb-6">Send a Message</h3>
-
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                  Name *
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  className="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-100 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                  Email *
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  className="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-100 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
-                  Subject *
-                </label>
-                <input
-                  id="subject"
-                  type="text"
-                  name="subject"
-                  className="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-100 focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-gray-100 focus:ring-2 focus:ring-blue-400 focus:border-transparent resize-none"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                variant="info"
-                className="w-full flex items-center justify-center gap-2"
-              >
-                <Icon name="Send" size="sm" />
-                Send Message
-              </Button>
-            </form>
           </div>
         </div>
       </div>

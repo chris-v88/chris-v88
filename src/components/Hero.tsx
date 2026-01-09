@@ -9,7 +9,7 @@ const Hero = () => {
           Hi, I'm <span className="text-blue-400">{aboutData.name}</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-6">{aboutData.title}</p>
-        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">{aboutData.bio}</p>
+        <p className="text-lg text-gray-400 mb-6 max-w-2xl mx-auto">{aboutData.bio}</p>
 
         <div className="flex flex-wrap gap-6 justify-center mb-12">
           <div className="flex items-center gap-2 text-gray-400">
@@ -25,13 +25,13 @@ const Hero = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <a
             href="#projects"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="bg-gray-800 text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors border-2 border-blue-400"
+            className="bg-gray-800 text-blue-400 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors border-2 border-blue-400"
           >
             Get In Touch
           </a>
