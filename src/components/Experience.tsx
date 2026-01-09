@@ -54,7 +54,7 @@ export const Experience = () => {
     }));
 
   return (
-    <section id="experience" className="bg-gray-900 py-20 px-4">
+    <section id="experience" className="bg-gray-950 py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <section>
           <h2 className="text-3xl font-bold text-gray-100 mb-6">Experience</h2>

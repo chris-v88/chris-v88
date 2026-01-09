@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="shadow-md fixed top-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-90">
+    <header className="shadow-md fixed top-0 left-0 right-0 z-40 bg-gray-950 bg-opacity-90">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-2xl font-bold">

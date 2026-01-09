@@ -3,7 +3,7 @@ import { Icon } from './ui';
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center pt-16 bg-gray-900">
+    <section id="about" className="min-h-screen flex items-center justify-center pt-16 bg-gray-950">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-gray-100 mb-6">
           Hi, I'm <span className="text-blue-400">{aboutData.name}</span>
@@ -31,7 +31,7 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="bg-gray-800 text-blue-400 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors border-2 border-blue-400"
+            className="bg-gray-900 text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors border-2 border-blue-400"
           >
             Get In Touch
           </a>

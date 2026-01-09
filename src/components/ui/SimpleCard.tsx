@@ -32,7 +32,7 @@ export const SimpleCard = ({ data }: SimpleCardProps) => {
   const colors = getVariantColors(data.iconVariant);
 
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-3 mb-3">
         <Icon name={data.iconName} variant={data.iconVariant} />
         <div className="flex-1">

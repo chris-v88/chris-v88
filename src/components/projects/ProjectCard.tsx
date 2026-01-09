@@ -37,10 +37,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div
-      className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+      className="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
       onClick={onClick}
     >
-      <div className="aspect-video bg-gray-700 overflow-hidden">
+      <div className="aspect-video bg-gray-800 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
