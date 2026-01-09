@@ -1,4 +1,4 @@
-import { Icon } from './Icon';
+import { Icon } from '../ui/Icon';
 import { formatDate } from '../../utils/helpers';
 
 export type Project = {
@@ -8,6 +8,7 @@ export type Project = {
   image: string;
   github: string;
   live: string | null;
+  youtube: string | null;
   technologies: string[];
   startDate: string;
   endDate: string | null;
@@ -97,6 +98,18 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="ExternalLink" size="sm" />
               <span className="text-sm">Live Demo</span>
+            </a>
+          )}
+          {project.youtube && (
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-gray-300 hover:text-red-400 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Icon name="Youtube" size="sm" />
+              <span className="text-sm">Video</span>
             </a>
           )}
         </div>

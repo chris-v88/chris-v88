@@ -1,7 +1,7 @@
 import { Modal } from '../ui/Modal';
 import { Icon } from '../ui/Icon';
 import { formatDate } from '../../utils/helpers';
-import type { Project } from '../ui/ProjectCard';
+import type { Project } from './ProjectCard';
 
 export type ProjectModalProps = {
   project: Project;
@@ -61,6 +61,17 @@ export const ProjectModal = (props: ProjectModalProps) => {
             >
               <Icon name="ExternalLink" size="sm" />
               Live Demo
+            </a>
+          )}
+          {project.youtube && (
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+            >
+              <Icon name="Youtube" size="sm" />
+              Watch Video
             </a>
           )}
         </div>
