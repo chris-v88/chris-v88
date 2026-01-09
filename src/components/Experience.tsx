@@ -1,7 +1,7 @@
 import experienceData from '../data/experience.json';
 import educationData from '../data/education.json';
 import { SimpleCard, type SimpleCardData } from './ui';
-import { formatDateRange } from '../utils/dateHelpers';
+import { formatDateRange } from '../utils/helpers';
 
 type WorkExperience = {
   id: string;

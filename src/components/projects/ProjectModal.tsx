@@ -1,5 +1,6 @@
 import { Modal } from '../ui/Modal';
 import { Icon } from '../ui/Icon';
+import { formatDate } from '../../utils/helpers';
 import type { Project } from '../ui/ProjectCard';
 
 export type ProjectModalProps = {
@@ -10,11 +11,6 @@ export type ProjectModalProps = {
 
 export const ProjectModal = (props: ProjectModalProps) => {
   const { project, isOpen, onClose } = props;
-  const formatDate = (date: string | null) => {
-    if (!date) return 'Present';
-    const [year, month] = date.split('-');
-    return `${month}/${year}`;
-  };
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={project.title}>
