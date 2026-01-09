@@ -4,9 +4,9 @@
       "id": "4",
       "school": "FUNiX",
       "degree": "Certificate",
-      "field": "Full-Stack Development Program ",
+      "field": "Automotive Application Developer",
       "location": "Online",
-      "startDate": "07-2025",
+      "startDate": "01-2026",
       "endDate": null,
       "skills": ["C++", "Qt"]
     },
@@ -14,10 +14,10 @@
       "id": "3",
       "school": "CyberSoft",
       "degree": "Certificate",
-      "field": "NodeJS Development Program",
+      "field": "NodeJS Backend Developer",
       "location": "Online",
       "startDate": "07-2025",
-      "endDate": "12-2025",
+      "endDate": "11-2025",
       "skills": ["NodeJS", "ExpressJS", "MVC", "SQL", "TablePlus", "Postman", "API"]
     },
     {

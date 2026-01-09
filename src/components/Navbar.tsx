@@ -1,4 +1,3 @@
-import aboutData from '../data/about.json';
 import { useState } from 'react';
 import { Icon } from './ui';
 
@@ -16,8 +15,8 @@ const Navbar = () => {
     <header className="shadow-md fixed top-0 left-0 right-0 z-40 bg-gray-900 bg-opacity-90">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-gray-100">
-            {aboutData.name}
+          <a href="#" className="text-2xl font-bold">
+            <img className="h-6 w-auto" src="/w-logo.png" alt="Logo" />
           </a>
 
           {/* Desktop Navigation */}
