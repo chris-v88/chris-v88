@@ -8,7 +8,16 @@
       "startDate": "2021-05",
       "endDate": null,
       "description": "Developed responsive web applications with React, TypeScript, and Tailwind CSS, reducing production incidents by 60% through Agile collaboration.",
-      "technologies": ["React", "JavaScript", "TypeScript", "Tailwind CSS", "Zustand", "Formik", "Zod", "Agile"]
+      "technologies": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand",
+        "Formik",
+        "Zod",
+        "Agile"
+      ]
     },
     {
       "id": "2",

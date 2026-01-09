@@ -28,7 +28,16 @@
       "location": "Philadelphia, PA",
       "startDate": "02-2020",
       "endDate": "04-2020",
-      "skills": ["Java", "MariaDB", "Spring Boot", "Git", "Agile Methodologies", "MVC", "Postman", "API"]
+      "skills": [
+        "Java",
+        "MariaDB",
+        "Spring Boot",
+        "Git",
+        "Agile Methodologies",
+        "MVC",
+        "Postman",
+        "API"
+      ]
     },
     {
       "id": "1",
