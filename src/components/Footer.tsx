@@ -34,7 +34,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-6 text-center text-gray-400">
           <p>
-            &copy; {currentYear} {aboutData.name}. All rights reserved.
+            &copy; {currentYear} {aboutData.name} v.1.0.0
           </p>
         </div>
       </div>

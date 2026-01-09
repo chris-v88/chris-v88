@@ -20,9 +20,9 @@ const Contact = () => {
             </h3>
 
             <div className="space-y-6">
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-start gap-4">
                 <Icon name="Mail" />
-                <div className="text-center">
+                <div>
                   <h4 className="font-semibold text-gray-100">Email</h4>
                   <a href={`mailto:${email}`} className="text-blue-400 hover:text-blue-300">
                     {email}
@@ -30,17 +30,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-start gap-4">
                 <Icon name="MapPin" />
-                <div className="text-center">
+                <div>
                   <h4 className="font-semibold text-gray-100">Location</h4>
                   <p className="text-gray-400">{location}</p>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-start gap-4">
                 <Icon name="Linkedin" />
-                <div className="text-center">
+                <div>
                   <h4 className="font-semibold text-gray-100">LinkedIn</h4>
                   <a
                     href={linkedin}
@@ -53,9 +53,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-start gap-4">
                 <Icon name="Github" />
-                <div className="text-center">
+                <div>
                   <h4 className="font-semibold text-gray-100">GitHub</h4>
                   <a
                     href={github}
