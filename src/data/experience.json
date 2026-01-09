@@ -1,0 +1,24 @@
+{
+  "workExperience": [
+    {
+      "id": "1",
+      "company": "Comcast / Xfinity",
+      "position": "Software Engineer",
+      "location": "San Francisco, CA",
+      "startDate": "2021-05",
+      "endDate": null,
+      "description": "Developed responsive web applications with React, TypeScript, and Tailwind CSS, reducing production incidents by 60% through Agile collaboration.",
+      "technologies": ["React", "JavaScript", "TypeScript", "Tailwind CSS", "Zustand", "Formik", "Zod", "Agile"]
+    },
+    {
+      "id": "2",
+      "company": "Y.I.K.E.S Inc",
+      "position": "Full Stack Developer",
+      "location": "Remote",
+      "startDate": "2020-02",
+      "endDate": "2021-04",
+      "description": "Built custom WordPress themes with PHP and JavaScript, managed deployments, and maintained plugins for improved performance.",
+      "technologies": ["PHP", "JavaScript", "Bootstrap 4", "WordPress", "Git", "Bitbucket"]
+    }
+  ]
+}

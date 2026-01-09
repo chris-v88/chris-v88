@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Insta-photo",
+      "description": "Built a full-stack Instagram-clone web application using React, TypeScript, NodeJS and MySQL database with authentication, profile management, photo posting, comments, likes, and follow/unfollow functionality. Built RESTful API using ExpressJs with Prisma ORM for database management, implementing JWT-based authentication with refresh tokens and protected routes middleware.",
+      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+      "github": "https://github.com/chris-v88/insta-photo",
+      "live": null,
+      "technologies": ["React", "TypeScript", "NodeJS", "MySQL", "ExpressJs", "Prisma ORM", "JWT"],
+      "startDate": "2025-09",
+      "endDate": "2025-09",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "title": "QR Generator",
+      "description": "Built a web app using React and TypeScript that generates QR codes from user-submitted URLs using qrcode.react, with real-time preview. Implemented react-hook-form for efficient form handling and validation, improving UX and reducing form errors by 30%. Configured Webpack polyfills to support NodeJs modules in-browser, ensuring browser compatibility.",
+      "image": "https://images.unsplash.com/photo-1595079676601-7b2e4b4b4b4b?w=800&q=80",
+      "github": "https://github.com/chris-v88/qr-code-generator",
+      "live": null,
+      "technologies": ["React", "TypeScript", "qrcode.react", "react-hook-form", "Webpack"],
+      "startDate": "2024-10",
+      "endDate": null,
+      "status": "in-progress"
+    },
+    {
+      "id": "3",
+      "title": "JS/TS Playground",
+      "description": "JavaScript/TypeScript Playground - with eslint and error output",
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+      "github": "https://github.com/chris-v88/js-ts-playground",
+      "live": null,
+      "technologies": ["JavaScript", "TypeScript", "ESLint"],
+      "startDate": "2025-01",
+      "endDate": null,
+      "status": "in-progress"
+    },
+    {
+      "id": "4",
+      "title": "Guess Number Game",
+      "description": "Remake old game from college (simple JS and DOM) to React TypeScript with Zustand store and Tailwind classes",
+      "image": "https://images.unsplash.com/photo-1556438064-2d7646166914?w=800&q=80",
+      "github": "https://github.com/chris-v88/guess-number-game",
+      "live": null,
+      "technologies": ["React", "TypeScript", "Zustand", "Tailwind CSS"],
+      "startDate": "2023-11",
+      "endDate": null,
+      "status": "in-progress"
+    }
+  ]
+}

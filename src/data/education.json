@@ -1,0 +1,55 @@
+{
+  "education": [
+    {
+      "id": "4",
+      "school": "FUNiX",
+      "degree": "Certificate",
+      "field": "Full-Stack Development Program ",
+      "location": "Online",
+      "startDate": "07-2025",
+      "endDate": null,
+      "skills": ["C++", "Qt"]
+    },
+    {
+      "id": "3",
+      "school": "CyberSoft",
+      "degree": "Certificate",
+      "field": "NodeJS Development Program",
+      "location": "Online",
+      "startDate": "07-2025",
+      "endDate": "12-2025",
+      "skills": ["NodeJS", "ExpressJS", "MVC", "SQL", "TablePlus", "Postman", "API"]
+    },
+    {
+      "id": "2",
+      "school": "Per Scholas",
+      "degree": "Certificate",
+      "field": "Java Development",
+      "location": "Philadelphia, PA",
+      "startDate": "02-2020",
+      "endDate": "04-2020",
+      "skills": ["Java", "MariaDB", "Spring Boot", "Git", "Agile Methodologies", "MVC", "Postman", "API"]
+    },
+    {
+      "id": "1",
+      "school": "La Salle University",
+      "degree": "Bachelor of Art",
+      "field": "Computer Science",
+      "location": "Philadelphia, PA",
+      "startDate": null,
+      "endDate": "05-2019",
+      "skills": [
+        "JavaScript",
+        "Java",
+        "C",
+        "C#",
+        "Python",
+        "SQL",
+        "Asp .NET",
+        "Agile Methodologies",
+        "Data Structures",
+        "Algorithms"
+      ]
+    }
+  ]
+}
