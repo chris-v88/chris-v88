@@ -3,9 +3,10 @@ import educationData from '../data/education.json';
 import { SimpleCard, type SimpleCardData } from './ui';
 import { formatDateRange } from '../utils/helpers';
 
-type WorkExperience = {
+export type WorkExperience = {
   id: string;
   company: string;
+  website: string;
   position: string;
   location: string;
   startDate: string;
@@ -14,9 +15,10 @@ type WorkExperience = {
   technologies: string[];
 };
 
-type Education = {
+export type Education = {
   id: string;
   school: string;
+  website: string;
   degree: string;
   field: string;
   location: string;
@@ -32,6 +34,7 @@ export const Experience = () => {
   const workItems: SimpleCardData[] = workExperience.map((item) => ({
     header: item.position,
     subheader: item.company,
+    url: item.website,
     location: item.location,
     date: formatDateRange(item.startDate, item.endDate),
     description: item.description,
@@ -45,6 +48,7 @@ export const Experience = () => {
     .map((item) => ({
       header: item.school,
       subheader: item.field,
+      url: item.website,
       location: item.location,
       date: formatDateRange(item.startDate, item.endDate),
       description: item.degree,

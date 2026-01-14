@@ -30,6 +30,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/Chris-Vo_resume.pdf"
+              download
+              className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
+            >
+              <Icon name="FileText" /> Resume
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -54,6 +61,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/Chris-Vo_resume.pdf"
+              download
+              className="flex py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors items-center gap-2"
+            >
+              <Icon name="FileText" /> Resume
+            </a>
           </div>
         )}
       </nav>

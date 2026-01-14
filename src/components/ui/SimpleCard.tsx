@@ -4,6 +4,7 @@ import * as LucideIcons from 'lucide-react';
 export type SimpleCardData = {
   header: string;
   subheader: string;
+  url: string;
   location: string;
   date: string;
   description?: string;
@@ -17,6 +18,8 @@ export type SimpleCardProps = {
 };
 
 export const SimpleCard = ({ data }: SimpleCardProps) => {
+  const { header, subheader, url, location, date, description, tech, iconName, iconVariant } = data;
+
   const getVariantColors = (variant: IconVariant) => {
     const colorMap = {
       info: { text: 'text-blue-400', bg: 'bg-blue-900', textTag: 'text-blue-200' },
@@ -29,32 +32,39 @@ export const SimpleCard = ({ data }: SimpleCardProps) => {
     return colorMap[variant];
   };
 
-  const colors = getVariantColors(data.iconVariant);
+  const colors = getVariantColors(iconVariant);
 
   return (
     <div className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-3 mb-3">
-        <Icon name={data.iconName} variant={data.iconVariant} />
+        <Icon name={iconName} variant={iconVariant} />
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-gray-100">{data.header}</h3>
-          <p className={`font-semibold ${colors.text}`}>{data.subheader}</p>
+          <h3 className="text-xl font-bold text-gray-100">{header}</h3>
+          <a
+            href={url ?? ''}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`font-semibold ${colors.text} hover:underline hover:italic`}
+          >
+            {subheader}
+          </a>
         </div>
       </div>
 
       <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
         <Icon name="MapPin" size="sm" />
-        <span>{data.location}</span>
+        <span>{location}</span>
       </div>
 
       <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
         <Icon name="Calendar" size="sm" />
-        <span>{data.date}</span>
+        <span>{date}</span>
       </div>
 
-      {data.description && <p className="text-gray-300 mb-4">{data.description}</p>}
+      {description && <p className="text-gray-300 mb-4">{description}</p>}
 
       <div className="flex flex-wrap gap-2">
-        {data.tech.map((item) => (
+        {tech.map((item) => (
           <span key={item} className={`px-2 py-1 rounded text-xs ${colors.bg} ${colors.textTag}`}>
             {item}
           </span>

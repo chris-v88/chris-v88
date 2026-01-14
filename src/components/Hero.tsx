@@ -11,7 +11,7 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-gray-300 mb-6">{aboutData.title}</p>
         <p className="text-lg text-gray-400 mb-6 max-w-2xl mx-auto">{aboutData.bio}</p>
 
-        <div className="flex flex-wrap gap-6 justify-center mb-12">
+        <div className="flex flex-wrap gap-6 justify-center mb-6">
           <div className="flex items-center gap-2 text-gray-400">
             <Icon name="Mail" size="sm" variant="info" />
             <span>{aboutData.email}</span>
@@ -20,6 +20,17 @@ const Hero = () => {
             <Icon name="MapPin" size="sm" variant="info" />
             <span>{aboutData.location}</span>
           </div>
+        </div>
+
+        <div className="flex flex-wrap gap-6 justify-center mb-6">
+          <a
+            href="/Chris-Vo_resume.pdf"
+            download
+            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+          >
+            <Icon name="Download" size="sm" variant="info" />
+            <span>Download resume here</span>
+          </a>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center">

@@ -37,6 +37,13 @@ const Footer = () => {
             >
               <Icon name="Mail" />
             </a>
+            <a
+              href="/Chris-Vo_resume.pdf"
+              download
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <Icon name="Download" />
+            </a>
           </div>
         </div>
       </div>

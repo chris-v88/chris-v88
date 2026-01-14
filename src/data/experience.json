@@ -3,6 +3,7 @@
     {
       "id": "1",
       "company": "Comcast / Xfinity",
+      "website": "https://www.xfinity.com/",
       "position": "Software Engineer",
       "location": "Philadelphia, PA",
       "startDate": "2021-05",
@@ -22,6 +23,7 @@
     {
       "id": "2",
       "company": "Y.I.K.E.S Inc",
+      "website": "https://www.yikesinc.com/",
       "position": "Full Stack Developer",
       "location": "Remote",
       "startDate": "2020-02",
