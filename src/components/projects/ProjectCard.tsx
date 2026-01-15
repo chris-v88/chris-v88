@@ -26,7 +26,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   const statusColors = {
     completed: 'bg-green-900 text-green-200',
     'in-progress': 'bg-blue-900 text-blue-200',
-    planned: 'bg-gray-700 text-gray-300',
+    planned: 'bg-neutral-700 text-gray-300',
   };
 
   const statusLabels = {
@@ -37,10 +37,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div
-      className="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+      className="bg-neutral-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
       onClick={onClick}
     >
-      <div className="aspect-video bg-gray-800 overflow-hidden">
+      <div className="aspect-video bg-neutral-800 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}

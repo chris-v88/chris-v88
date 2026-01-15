@@ -46,7 +46,7 @@ export const ProjectModal = (props: ProjectModalProps) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-2 bg-neutral-800 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Icon name="Github" size="sm" />
               View Code
@@ -68,7 +68,7 @@ export const ProjectModal = (props: ProjectModalProps) => {
               href={project.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+              className="flex items-center gap-2 bg-red-400 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
             >
               <Icon name="Youtube" size="sm" />
               Watch Video

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Icon } from './ui';
+import { Button, Icon } from './ui';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +26,13 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <Button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
             <Icon name={isMenuOpen ? 'X' : 'Menu'} />
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
