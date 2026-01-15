@@ -43,7 +43,7 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start gap-4">
         <div className="mt-1">
-          <Icon name={company ? 'Briefcase' : 'GraduationCap'} variant="info" />
+          <Icon name={company ? 'Briefcase' : 'GraduationCap'} tone="info" />
         </div>
         <div className="flex-1">
           <h3 className="text-xl font-bold text-gray-900">

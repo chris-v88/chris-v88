@@ -16,7 +16,7 @@
     {
       "id": "2",
       "title": "QR Generator",
-      "description": "Built a web app using React and TypeScript that generates QR codes from user-submitted URLs using qrcode.react, with real-time virustotal preview. Configured Webpack polyfills to support NodeJs modules in-browser, ensuring browser compatibility.",
+      "description": "Built a web app using React and TypeScript that generates QR codes from user-submitted URLs using qrcode.react, with real-time virustotal preview. Configured Webpack polyfills to support NodeJs modules in-browser, ensuring browser compatibility. Implemented VirusTotal API and URL sanitizing integration to scan URLs for safety before generating QR codes, enhancing user security.",
       "image": "/images/qr-code-generator.png",
       "github": "https://github.com/chris-v88/qr-code-generator",
       "live": "https://qr-code-generator-lilac-two-11.vercel.app/",

@@ -1,5 +1,6 @@
 import { Modal } from '../ui/Modal';
 import { Icon } from '../ui/Icon';
+import { Button } from '../ui/Button';
 import { formatDate } from '../../utils/helpers';
 import type { Project } from './ProjectCard';
 
@@ -42,37 +43,40 @@ export const ProjectModal = (props: ProjectModalProps) => {
 
         <div className="flex gap-4 pt-4">
           {project.github && (
-            <a
+            <Button
+              display="fill"
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-2 bg-neutral-800 text-white hover:bg-neutral-700 transition-colors"
             >
               <Icon name="Github" size="sm" />
               View Code
-            </a>
+            </Button>
           )}
           {project.live && (
-            <a
+            <Button
+              display="fill"
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
             >
               <Icon name="ExternalLink" size="sm" />
               Live Demo
-            </a>
+            </Button>
           )}
           {project.youtube && (
-            <a
+            <Button
+              display="fill"
               href={project.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+              className="flex items-center gap-2 bg-red-400 text-white hover:bg-red-700 transition-colors"
             >
               <Icon name="Youtube" size="sm" />
               Watch Video
-            </a>
+            </Button>
           )}
         </div>
       </div>

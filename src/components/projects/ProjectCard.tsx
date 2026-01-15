@@ -1,4 +1,5 @@
 import { Icon } from '../ui/Icon';
+import { Button } from '../ui/Button';
 import { formatDate } from '../../utils/helpers';
 
 export type Project = {
@@ -26,7 +27,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   const statusColors = {
     completed: 'bg-green-900 text-green-200',
     'in-progress': 'bg-blue-900 text-blue-200',
-    planned: 'bg-gray-700 text-gray-300',
+    planned: 'bg-neutral-700 text-gray-300',
   };
 
   const statusLabels = {
@@ -37,10 +38,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div
-      className="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+      className="bg-neutral-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
       onClick={onClick}
     >
-      <div className="aspect-video bg-gray-800 overflow-hidden">
+      <div className="aspect-video bg-neutral-800 overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
@@ -77,7 +78,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
         <div className="flex gap-3">
           {project.github && (
-            <a
+            <Button
+              display="link"
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -86,10 +88,11 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="Github" size="sm" />
               <span className="text-sm">Code</span>
-            </a>
+            </Button>
           )}
           {project.live && (
-            <a
+            <Button
+              display="link"
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
@@ -98,10 +101,11 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="ExternalLink" size="sm" />
               <span className="text-sm">Live Demo</span>
-            </a>
+            </Button>
           )}
           {project.youtube && (
-            <a
+            <Button
+              display="link"
               href={project.youtube}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +114,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="Youtube" size="sm" />
               <span className="text-sm">Video</span>
-            </a>
+            </Button>
           )}
         </div>
       </div>

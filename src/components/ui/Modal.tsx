@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { ReactNode } from 'react';
 import { X } from 'lucide-react';
+import Button from './Button';
 
 export type ModalProps = {
   isOpen: boolean;
@@ -40,18 +41,18 @@ export const Modal = (props: ModalProps) => {
     >
       <div
         ref={modalRef}
-        className="bg-gray-900 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-neutral-900 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <h2 className="text-2xl font-bold text-gray-100">{title}</h2>
-          <button
+          <Button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-200 transition-colors"
             aria-label="Close modal"
           >
             <X size={24} />
-          </button>
+          </Button>
         </div>
         <div className="p-6">{children}</div>
       </div>

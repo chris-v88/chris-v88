@@ -1,25 +1,71 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
+import { toneStyles } from './colors';
 
-export type ButtonVariant = 'info' | 'success' | 'caution' | 'warning';
+export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral';
+export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: ButtonVariant;
+export type ButtonProps = {
+  tone?: ButtonTone;
+  display?: ButtonDisplay;
+  className?: string;
+  onClick?: (e?: any) => void; // eslint-disable-line @typescript-eslint/no-explicit-any
   children: ReactNode;
-};
+  href?: string;
+  target?: string;
+  rel?: string;
+  download?: boolean;
+} & (ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement>);
 
-const variantStyles: Record<ButtonVariant, string> = {
-  info: 'bg-blue-600 hover:bg-blue-700 text-white',
-  success: 'bg-green-600 hover:bg-green-700 text-white',
-  caution: 'bg-red-600 hover:bg-red-700 text-white',
-  warning: 'bg-orange-600 hover:bg-orange-700 text-white',
+const displayStyles: Record<ButtonDisplay, string> = {
+  fill: 'px-4 py-2 rounded-lg font-medium',
+  outline: 'px-4 py-2 rounded-lg font-medium border-2',
+  ghost: 'px-4 py-2 rounded-lg font-medium',
+  link: 'p-0 font-medium',
+  'ghost-icon': 'p-2 rounded-lg',
+  menu: 'px-4 py-2 rounded-lg font-medium',
 };
 
 export const Button = (props: ButtonProps) => {
-  const { variant = 'info', children, className = '', ...rest } = props;
+  const {
+    tone = 'info',
+    display = 'fill',
+    children,
+    className,
+    onClick,
+    href,
+    target,
+    rel,
+    download,
+    ...rest
+  } = props;
+  const baseClasses =
+    'cursor-pointer transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
+  const displayClass = displayStyles[display];
+  const toneClass = toneStyles[tone][display];
+
+  const combinedClassName = `${baseClasses} ${displayClass} ${toneClass} ${className || ''}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        download={download}
+        className={combinedClassName}
+        onClick={onClick}
+        {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
-      className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${variantStyles[variant]} ${className}`}
-      {...rest}
+      className={combinedClassName}
+      onClick={onClick}
+      {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </button>
