@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Icon } from './ui';
+import { Button, Icon } from './ui';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,52 +22,56 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Button
                 key={link.href}
+                display="link"
                 href={link.href}
                 className="font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
                 {link.label}
-              </a>
+              </Button>
             ))}
-            <a
+            <Button
+              display="link"
               href="/Chris-Vo_resume.pdf"
               download
               className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
             >
               <Icon name="FileText" /> Resume
-            </a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <Button
             className="md:hidden text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
             <Icon name={isMenuOpen ? 'X' : 'Menu'} />
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-gray-700">
             {navLinks.map((link) => (
-              <a
+              <Button
                 key={link.href}
+                display="link"
                 href={link.href}
                 className="block py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
                 {link.label}
-              </a>
+              </Button>
             ))}
-            <a
+            <Button
+              display="link"
               href="/Chris-Vo_resume.pdf"
               download
               className="flex py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors items-center gap-2"
             >
               <Icon name="FileText" /> Resume
-            </a>
+            </Button>
           </div>
         )}
       </nav>

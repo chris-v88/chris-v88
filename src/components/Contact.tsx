@@ -1,5 +1,5 @@
 import aboutData from '../data/about.json';
-import { Icon } from './ui';
+import { Button, Icon } from './ui';
 
 const Contact = () => {
   const { email, location, linkedin, github } = aboutData;
@@ -24,9 +24,9 @@ const Contact = () => {
                 <Icon name="Mail" />
                 <div>
                   <h4 className="font-semibold text-gray-100">Email</h4>
-                  <a href={`mailto:${email}`} className="text-blue-400 hover:text-blue-300">
+                  <Button display="link" onClick={() => (window.location.href = `mailto:${email}`)}>
                     {email}
-                  </a>
+                  </Button>
                 </div>
               </div>
 
@@ -42,14 +42,9 @@ const Contact = () => {
                 <Icon name="Linkedin" />
                 <div>
                   <h4 className="font-semibold text-gray-100">LinkedIn</h4>
-                  <a
-                    href={linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300"
-                  >
+                  <Button display="link" href={linkedin} target="_blank" rel="noopener noreferrer">
                     {linkedin.replace('https://www.', '')}
-                  </a>
+                  </Button>
                 </div>
               </div>
 
@@ -57,14 +52,9 @@ const Contact = () => {
                 <Icon name="Github" />
                 <div>
                   <h4 className="font-semibold text-gray-100">GitHub</h4>
-                  <a
-                    href={github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300"
-                  >
+                  <Button display="link" href={github} target="_blank" rel="noopener noreferrer">
                     {github.replace('https://', '')}
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>

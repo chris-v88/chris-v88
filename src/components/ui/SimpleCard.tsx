@@ -1,4 +1,5 @@
 import { Icon, type IconTone } from './Icon';
+import { Button } from './Button';
 import * as LucideIcons from 'lucide-react';
 
 export type SimpleCardData = {
@@ -40,14 +41,15 @@ export const SimpleCard = ({ data }: SimpleCardProps) => {
         <Icon name={iconName} tone={iconTone} />
         <div className="flex-1">
           <h3 className="text-xl font-bold text-gray-100">{header}</h3>
-          <a
+          <Button
+            display="link"
             href={url ?? ''}
             target="_blank"
             rel="noopener noreferrer"
             className={`font-semibold ${colors.text} hover:underline hover:italic`}
           >
             {subheader}
-          </a>
+          </Button>
         </div>
       </div>
 

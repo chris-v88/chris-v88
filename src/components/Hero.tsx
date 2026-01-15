@@ -1,5 +1,5 @@
 import aboutData from '../data/about.json';
-import { Icon } from './ui';
+import { Icon, Button } from './ui';
 
 const Hero = () => {
   return (
@@ -26,29 +26,32 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-wrap gap-6 justify-center mb-6">
-          <a
+          <Button
+            display="link"
             href="/Chris-Vo_resume.pdf"
             download
             className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
           >
             <Icon name="Download" size="sm" tone="info" />
             <span>Download resume here</span>
-          </a>
+          </Button>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <a
+          <Button
+            display="fill"
             href="#projects"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
             View My Work
-          </a>
-          <a
+          </Button>
+          <Button
+            display="outline"
             href="#contact"
             className="bg-neutral-900 text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors border-2 border-blue-400"
           >
             Get In Touch
-          </a>
+          </Button>
         </div>
       </div>
     </section>

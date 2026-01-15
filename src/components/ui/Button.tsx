@@ -1,15 +1,19 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 
-export type ButtonTone = 'info' | 'success' | 'caution' | 'warning';
+export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral';
 export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = {
   tone?: ButtonTone;
   display?: ButtonDisplay;
   className?: string;
-  onClick: () => void;
+  onClick?: (e?: any) => void; // eslint-disable-line @typescript-eslint/no-explicit-any
   children: ReactNode;
-};
+  href?: string;
+  target?: string;
+  rel?: string;
+  download?: boolean;
+} & (ButtonHTMLAttributes<HTMLButtonElement> | AnchorHTMLAttributes<HTMLAnchorElement>);
 
 const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
   info: {
@@ -44,6 +48,14 @@ const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     'ghost-icon': 'text-orange-400 hover:bg-orange-100',
     menu: 'text-orange-400 hover:bg-orange-100',
   },
+  neutral: {
+    fill: 'bg-gray-400 hover:bg-gray-500 text-white',
+    outline: 'border-gray-400 text-gray-400 hover:bg-gray-50',
+    ghost: 'text-gray-400 hover:bg-gray-100',
+    link: 'text-gray-400 hover:text-gray-500 hover:underline',
+    'ghost-icon': 'text-gray-400 hover:bg-gray-100',
+    menu: 'text-gray-400 hover:bg-gray-100',
+  },
 };
 
 const displayStyles: Record<ButtonDisplay, string> = {
@@ -56,16 +68,46 @@ const displayStyles: Record<ButtonDisplay, string> = {
 };
 
 export const Button = (props: ButtonProps) => {
-  const { tone = 'info', display = 'fill', children, className, onClick } = props;
+  const {
+    tone = 'info',
+    display = 'fill',
+    children,
+    className,
+    onClick,
+    href,
+    target,
+    rel,
+    download,
+    ...rest
+  } = props;
   const baseClasses =
     'cursor-pointer transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const displayClass = displayStyles[display];
   const toneClass = toneStyles[tone][display];
 
+  const combinedClassName = `${baseClasses} ${displayClass} ${toneClass} ${className || ''}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        download={download}
+        className={combinedClassName}
+        onClick={onClick}
+        {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
-      className={`${baseClasses} ${displayClass} ${toneClass} ${className || ''}`}
+      className={combinedClassName}
       onClick={onClick}
+      {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </button>

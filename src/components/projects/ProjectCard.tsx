@@ -1,4 +1,5 @@
 import { Icon } from '../ui/Icon';
+import { Button } from '../ui/Button';
 import { formatDate } from '../../utils/helpers';
 
 export type Project = {
@@ -77,7 +78,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
         <div className="flex gap-3">
           {project.github && (
-            <a
+            <Button
+              display="link"
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -86,10 +88,11 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="Github" size="sm" />
               <span className="text-sm">Code</span>
-            </a>
+            </Button>
           )}
           {project.live && (
-            <a
+            <Button
+              display="link"
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
@@ -98,10 +101,11 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="ExternalLink" size="sm" />
               <span className="text-sm">Live Demo</span>
-            </a>
+            </Button>
           )}
           {project.youtube && (
-            <a
+            <Button
+              display="link"
               href={project.youtube}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +114,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             >
               <Icon name="Youtube" size="sm" />
               <span className="text-sm">Video</span>
-            </a>
+            </Button>
           )}
         </div>
       </div>
