@@ -41,14 +41,14 @@ const Hero = () => {
           <Button
             display="fill"
             href="#projects"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white hover:bg-blue-700 transition-colors"
           >
             View My Work
           </Button>
           <Button
             display="outline"
             href="#contact"
-            className="bg-neutral-900 text-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors border-2 border-blue-400"
+            className="bg-neutral-900 text-blue-400 hover:bg-neutral-800 transition-colors"
           >
             Get In Touch
           </Button>

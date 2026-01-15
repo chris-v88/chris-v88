@@ -24,7 +24,7 @@ const Contact = () => {
                 <Icon name="Mail" />
                 <div>
                   <h4 className="font-semibold text-gray-100">Email</h4>
-                  <Button display="link" onClick={() => (window.location.href = `mailto:${email}`)}>
+                  <Button display="link" href={`mailto:${email}`}>
                     {email}
                   </Button>
                 </div>
