@@ -1,7 +1,20 @@
 {
   "projects": [
     {
-      "id": "1",
+      "id": "6",
+      "title": "Scam Detector",
+      "description": "Building a full-stack application to detect any scam-likely info (phone number, email, message content, website) using NodeJS, React, TypeScript and MySQL database. Most likely will integerate with AI in future time for better detection. This is planned to build with easy to use in mind for older generation who have hard time detect if the person is scammer or not.",
+      "image": null,
+      "github": "https://github.com/chris-v88/scam-detect",
+      "live": null,
+      "youtube": null,
+      "technologies": ["React", "TypeScript", "NodeJS", "MySQL", "ExpressJs", "Prisma ORM", "JWT"],
+      "startDate": "2026-01",
+      "endDate": null,
+      "status": "in-progress"
+    },
+    {
+      "id": "4",
       "title": "Insta-photo",
       "description": "Built a full-stack Instagram-clone web application using React, TypeScript, NodeJS and MySQL database with authentication, profile management, photo posting, comments, likes, and follow/unfollow functionality. Built RESTful API using ExpressJs with Prisma ORM for database management, implementing JWT-based authentication with refresh tokens and protected routes middleware.",
       "image": "/images/insta-photo.png",
@@ -14,7 +27,7 @@
       "status": "completed"
     },
     {
-      "id": "2",
+      "id": "3",
       "title": "QR Generator",
       "description": "Built a web app using React and TypeScript that generates QR codes from user-submitted URLs using qrcode.react, with real-time virustotal preview. Configured Webpack polyfills to support NodeJs modules in-browser, ensuring browser compatibility. Implemented VirusTotal API and URL sanitizing integration to scan URLs for safety before generating QR codes, enhancing user security.",
       "image": "/images/qr-code-generator.png",
@@ -24,10 +37,10 @@
       "technologies": ["React", "TypeScript", "qrcode.react", "react-hook-form", "Webpack"],
       "startDate": "2024-10",
       "endDate": null,
-      "status": "in-progress"
+      "status": "completed"
     },
     {
-      "id": "3",
+      "id": "2",
       "title": "JS/TS Playground",
       "description": "JavaScript Playground - with eslint and error output. Currently working on implement TypeScript support and code sharing functionality.",
       "image": "/images/js-ts-playground.png",
@@ -40,7 +53,20 @@
       "status": "in-progress"
     },
     {
-      "id": "4",
+      "id": "5",
+      "title": "Web Game Series",
+      "description": "Repo for building all the web game using React TypeScript. There is a plan for changing this into a bigger application with back-end integrate so that user can store their point or save the games that they like. This is currently under-maintainance until further plan.",
+      "image": null,
+      "github": "https://github.com/chris-v88/web-games",
+      "live": null,
+      "youtube": null,
+      "technologies": ["React", "TypeScript"],
+      "startDate": "2025-05",
+      "endDate": null,
+      "status": "in-progress"
+    },
+    {
+      "id": "1",
       "title": "Guess Number Game",
       "description": "Remake old game from college (simple JS and DOM) to React TypeScript with Zustand store and Tailwind classes",
       "image": "/images/guess-number-game.png",
@@ -50,7 +76,7 @@
       "technologies": ["React", "TypeScript", "Zustand", "Tailwind CSS"],
       "startDate": "2023-11",
       "endDate": null,
-      "status": "in-progress"
+      "status": "completed"
     }
   ]
 }
