@@ -7,9 +7,9 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="min-h-screen dark bg-black">
+    <div className="min-h-screen dark bg-black flex flex-col">
       <Navbar />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <Experience />
         <Projects />
