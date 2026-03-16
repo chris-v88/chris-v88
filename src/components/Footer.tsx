@@ -42,7 +42,7 @@ const Footer = () => {
             </Button>
             <Button
               display="link"
-              href="/Chris-Vo_resume.pdf"
+              href="/docs/Chris-Vo_resume-02-2026.pdf"
               download
               className="text-gray-400 hover:text-white transition-colors"
             >

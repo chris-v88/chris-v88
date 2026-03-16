@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex flex-wrap gap-6 justify-center mb-6">
           <Button
             display="link"
-            href="/Chris-Vo_resume.pdf"
+            href="/docs/Chris-Vo_resume-02-2026.pdf"
             download
             className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
           >

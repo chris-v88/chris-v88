@@ -33,7 +33,7 @@ const Navbar = () => {
             ))}
             <Button
               display="link"
-              href="/Chris-Vo_resume.pdf"
+              href="/docs/Chris-Vo_resume-02-2026.pdf"
               download
               className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
             >
@@ -66,7 +66,7 @@ const Navbar = () => {
             ))}
             <Button
               display="link"
-              href="/Chris-Vo_resume.pdf"
+              href="/docs/Chris-Vo_resume-02-2026.pdf"
               download
               className="flex py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors items-center gap-2"
             >
