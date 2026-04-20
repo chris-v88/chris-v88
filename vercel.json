@@ -8,5 +8,9 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "vite"
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/version", "destination": "/version.json" },
+    { "source": "/config", "destination": "/index.html" }
+  ]
 }

@@ -1,5 +1,5 @@
 import aboutData from '../data/about.json';
-import { Button, Icon } from './ui';
+import { Button, Icon } from '../components/ui';
 
 const Contact = () => {
   const { email, location, linkedin, github } = aboutData;

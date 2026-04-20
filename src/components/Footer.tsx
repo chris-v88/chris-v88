@@ -2,18 +2,10 @@ import aboutData from '../data/about.json';
 import { Icon, Button } from './ui';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-neutral-950 text-white py-6 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center">
-          <div className="text-gray-400">
-            <p>
-              &copy; {currentYear} {aboutData.name} v.1.0.0
-            </p>
-          </div>
-
+        <div className="flex justify-end items-center">
           <div className="flex gap-4">
             <Button
               display="link"
