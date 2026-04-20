@@ -1,8 +1,9 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 import { toneStyles } from './colors';
+import { featureFlag, config } from '../../utils/featureFlags';
 
-export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral';
-export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
+export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral' | 'primary';
+export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu' | 'pixel';
 
 export type ButtonProps = {
   tone?: ButtonTone;
@@ -23,11 +24,16 @@ const displayStyles: Record<ButtonDisplay, string> = {
   link: 'p-0 font-medium',
   'ghost-icon': 'p-2 rounded-lg',
   menu: 'px-4 py-2 rounded-lg font-medium',
+  pixel: 'px-6 py-3 font-medium btn-pixel',
 };
 
 export const Button = (props: ButtonProps) => {
   const {
-    tone = 'info',
+    tone = featureFlag(
+      config.ENABLE_REWRITE_2026,
+      () => 'primary' as const,
+      () => 'info' as const
+    ),
     display = 'fill',
     children,
     className,

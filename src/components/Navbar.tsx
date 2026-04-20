@@ -33,7 +33,7 @@ const Navbar = () => {
             ))}
             <Button
               display="link"
-              href="/docs/Chris-Vo_resume-02-2026.pdf"
+              href="/docs/Chris-Vo_resume-04-2026.pdf"
               download
               className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
             >

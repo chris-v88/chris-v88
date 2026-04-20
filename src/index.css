@@ -18,3 +18,55 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
 }
+
+/* ── Font utilities ──────────────────────────────────────── */
+.font-jersey {
+  font-family: 'Jersey 25', 'Courier New', Courier, monospace;
+}
+.font-reddit-mono {
+  font-family: 'Reddit Mono', Geneva, Verdana, sans-serif;
+}
+
+/* ── Rewrite theme ───────────────────────────────────────── */
+.rw-theme {
+  --rw-bg: #160f0f;
+  --rw-container-bg: #949494;
+  --rw-btn-primary: #a51919;
+  --rw-pill-1: #22388c;
+  --rw-font: #ffffff;
+
+  background-color: var(--rw-bg);
+  color: var(--rw-font);
+}
+
+.rw-navbar {
+  background-color: rgba(22, 15, 15);
+}
+
+/* ── Pixel button ────────────────────────────────────────── */
+/* Notched corners + 3D press effect */
+.btn-pixel {
+  clip-path: polygon(
+    8px 0%,
+    calc(100% - 8px) 0%,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    0% calc(100% - 8px),
+    0% 8px
+  );
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s;
+}
+
+.btn-pixel:hover {
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.btn-pixel:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}

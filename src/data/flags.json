@@ -2,7 +2,7 @@
   "flags": [
     {
       "name": "ENABLE_REWRITE_2026",
-      "enabled": true,
+      "enabled": false,
       "expires": "2026-12-31",
       "description": "Enable the 2026 rewrite of the portfolio"
     }
