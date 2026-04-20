@@ -15,7 +15,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
   return (
     <header className="shadow-md fixed top-0 left-0 right-0 z-40 rw-navbar">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#">{logo}</a>
+        <a href="/">{logo}</a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-16">

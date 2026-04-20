@@ -32,6 +32,8 @@ export const Text = ({ display, children, className = '' }: TextProps) => {
           {children}
         </span>
       );
+    default:
+      return null;
   }
 };
 
