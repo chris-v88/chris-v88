@@ -32,7 +32,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
           ))}
 
           {/* Resume */}
-          <Button href="/docs/Chris-Vo_resume-04-2026.pdf">
+          <Button href="/docs/Chris-Vo_resume-04-2026.pdf" download>
             <Text display="h2">Resume</Text>
           </Button>
         </div>
