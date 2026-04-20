@@ -1,5 +1,5 @@
 import aboutData from '../data/about.json';
-import { Icon, Button } from './ui';
+import { Icon, Button } from '../components/ui';
 
 const Hero = () => {
   return (

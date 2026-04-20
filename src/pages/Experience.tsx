@@ -1,6 +1,6 @@
 import experienceData from '../data/experience.json';
 import educationData from '../data/education.json';
-import { SimpleCard, type SimpleCardData } from './ui';
+import { SimpleCard, type SimpleCardData } from '../components/ui';
 import { formatDateRange } from '../utils/helpers';
 
 export type WorkExperience = {
