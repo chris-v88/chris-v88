@@ -28,6 +28,14 @@ body {
   font-family: 'Reddit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+.font-pixelify-sans {
+  font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+}
+
+.font-press-start-2p {
+  font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+}
+
 /* ── Rewrite theme ───────────────────────────────────────── */
 .rw-theme {
   --rw-bg: #160f0f;

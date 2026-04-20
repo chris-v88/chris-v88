@@ -28,7 +28,21 @@ const App = () => {
     <div className={`min-h-screen flex flex-col ${isRewrite ? 'rw-theme' : 'dark bg-black'}`}>
       <FeatureFlag
         name="ENABLE_REWRITE_2026"
-        feature={<RewriteNavbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />}
+        feature={
+          <RewriteNavbar
+            logo={
+              <Text
+                display="custom"
+                fontFamily="'Press Start 2P', monospace"
+                fontSize="25px"
+                fontWeight="normal"
+              >
+                Chris Vo
+              </Text>
+            }
+            navLinks={navLinks}
+          />
+        }
         backup={<Navbar />}
       />
       <main className="flex-grow">
