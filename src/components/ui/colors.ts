@@ -42,6 +42,14 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     'ghost-icon': 'text-gray-400 hover:bg-gray-100',
     menu: 'text-gray-400 hover:bg-gray-100',
   },
+  primary: {
+    fill: 'bg-[#A51919] hover:bg-[#8B1515] text-white',
+    outline: 'border-[#A51919] text-[#A51919] hover:bg-[#A51919]/10',
+    ghost: 'text-[#A51919] hover:bg-[#A51919]/10',
+    link: 'text-[#A51919] hover:text-[#8B1515] hover:underline',
+    'ghost-icon': 'text-[#A51919] hover:bg-[#A51919]/10',
+    menu: 'text-[#A51919] hover:bg-[#A51919]/10',
+  },
 };
 
 export const toneTextColors: Record<IconTone, string> = {

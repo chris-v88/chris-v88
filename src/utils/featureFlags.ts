@@ -11,6 +11,10 @@ export type FlagConfig = {
 
 export const flags: FlagConfig[] = flagsData.flags;
 
+export const config = {
+  ENABLE_REWRITE_2026: 'ENABLE_REWRITE_2026',
+} as const;
+
 /**
  * Retrieves the feature flag overrides from localStorage.
  * @returns A record of feature flag names to their overridden boolean values.

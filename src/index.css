@@ -18,3 +18,60 @@ body {
   min-height: 100vh;
   background-color: #ffffff;
 }
+
+/* ── Font utilities ──────────────────────────────────────── */
+.font-jersey {
+  font-family: 'Jersey 15', 'Courier New', Courier, monospace;
+}
+
+.font-reddit-mono {
+  font-family: 'Reddit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ── Rewrite theme ───────────────────────────────────────── */
+.rw-theme {
+  --rw-bg: #160f0f;
+  --rw-container-bg: #949494;
+  --rw-btn-primary: #a51919;
+  --rw-pill-1: #22388c;
+  --rw-font: #ffffff;
+
+  background-color: var(--rw-bg);
+  color: var(--rw-font);
+}
+
+.rw-navbar {
+  background-color: rgba(22, 15, 15);
+}
+
+/* ── Pixel button ────────────────────────────────────────── */
+/* Right-angle concave (inverted) notch at each corner */
+.btn-pixel {
+  clip-path: polygon(
+    10px 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    10px calc(100% - 10px),
+    0% calc(100% - 10px),
+    0% 10px,
+    10px 10px
+  );
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s;
+}
+
+.btn-pixel:hover {
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.btn-pixel:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
