@@ -21,8 +21,9 @@ body {
 
 /* ── Font utilities ──────────────────────────────────────── */
 .font-jersey {
-  font-family: 'Jersey 25', 'Courier New', Courier, monospace;
+  font-family: 'Jersey 15', 'Courier New', Courier, monospace;
 }
+
 .font-reddit-mono {
   font-family: 'Reddit Mono', Geneva, Verdana, sans-serif;
 }
