@@ -32,11 +32,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
           ))}
 
           {/* Resume */}
-          <Button
-            // className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
-            href="/docs/Chris-Vo_resume-04-2026.pdf"
-            download
-          >
+          <Button href="/docs/Chris-Vo_resume-04-2026.pdf">
             <Text display="h2">Resume</Text>
           </Button>
         </div>

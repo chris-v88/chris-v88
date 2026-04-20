@@ -9,7 +9,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-blue-400 hover:text-blue-500 hover:underline',
     'ghost-icon': 'text-blue-400 hover:bg-blue-100',
     menu: 'text-blue-400 hover:bg-blue-100',
-    pixel: 'bg-blue-400 hover:bg-blue-500 text-white',
   },
   success: {
     fill: 'bg-green-400 hover:bg-green-500 text-white',
@@ -18,7 +17,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-green-400 hover:text-green-500 hover:underline',
     'ghost-icon': 'text-green-400 hover:bg-green-100',
     menu: 'text-green-400 hover:bg-green-100',
-    pixel: 'bg-green-400 hover:bg-green-500 text-white',
   },
   caution: {
     fill: 'bg-red-400 hover:bg-red-500 text-white',
@@ -27,7 +25,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-red-400 hover:text-red-500 hover:underline',
     'ghost-icon': 'text-red-400 hover:bg-red-100',
     menu: 'text-red-400 hover:bg-red-100',
-    pixel: 'bg-red-400 hover:bg-red-500 text-white',
   },
   warning: {
     fill: 'bg-orange-400 hover:bg-orange-500 text-white',
@@ -36,7 +33,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-orange-400 hover:text-orange-500 hover:underline',
     'ghost-icon': 'text-orange-400 hover:bg-orange-100',
     menu: 'text-orange-400 hover:bg-orange-100',
-    pixel: 'bg-orange-400 hover:bg-orange-500 text-white',
   },
   neutral: {
     fill: 'bg-gray-400 hover:bg-gray-500 text-white',
@@ -45,7 +41,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-gray-400 hover:text-gray-500 hover:underline',
     'ghost-icon': 'text-gray-400 hover:bg-gray-100',
     menu: 'text-gray-400 hover:bg-gray-100',
-    pixel: 'bg-gray-400 hover:bg-gray-500 text-white',
   },
   primary: {
     fill: 'bg-[#A51919] hover:bg-[#8B1515] text-white',
@@ -54,7 +49,6 @@ export const toneStyles: Record<ButtonTone, Record<ButtonDisplay, string>> = {
     link: 'text-[#A51919] hover:text-[#8B1515] hover:underline',
     'ghost-icon': 'text-[#A51919] hover:bg-[#A51919]/10',
     menu: 'text-[#A51919] hover:bg-[#A51919]/10',
-    pixel: 'bg-[#A51919] hover:bg-[#8B1515] text-white',
   },
 };
 

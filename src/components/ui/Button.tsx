@@ -3,7 +3,7 @@ import { toneStyles } from './colors';
 import { featureFlag, config } from '../../utils/featureFlags';
 
 export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral' | 'primary';
-export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu' | 'pixel';
+export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
 
 export type ButtonProps = {
   tone?: ButtonTone;
@@ -24,8 +24,9 @@ const displayStyles: Record<ButtonDisplay, string> = {
   link: 'p-0 font-medium',
   'ghost-icon': 'p-2 rounded-lg',
   menu: 'px-4 py-2 rounded-lg font-medium',
-  pixel: 'px-6 py-3 font-medium btn-pixel',
 };
+
+const PIXEL_DISPLAYS: ButtonDisplay[] = ['fill', 'outline', 'menu'];
 
 export const Button = (props: ButtonProps) => {
   const {
@@ -48,8 +49,16 @@ export const Button = (props: ButtonProps) => {
     'cursor-pointer transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const displayClass = displayStyles[display];
   const toneClass = toneStyles[tone][display];
+  const pixelClass = PIXEL_DISPLAYS.includes(display)
+    ? featureFlag(
+        config.ENABLE_REWRITE_2026,
+        () => 'btn-pixel px-6 py-3',
+        () => ''
+      )
+    : '';
 
-  const combinedClassName = `${baseClasses} ${displayClass} ${toneClass} ${className || ''}`;
+  const combinedClassName =
+    `${baseClasses} ${displayClass} ${toneClass} ${pixelClass} ${className || ''}`.trim();
 
   if (href) {
     return (
