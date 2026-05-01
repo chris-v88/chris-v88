@@ -26,11 +26,11 @@ export const Text = ({
 
   switch (display) {
     case 'h1':
-      return <h1 className={cx('font-jersey text-[36px] font-normal')}>{children}</h1>;
+      return <h1 className={cx('font-jersey text-[30px] font-normal')}>{children}</h1>;
     case 'h2':
-      return <h2 className={cx('font-jersey text-[20px] font-bold')}>{children}</h2>;
+      return <h2 className={cx('font-pixelify-sans text-[20px] font-bold')}>{children}</h2>;
     case 'h3':
-      return <h3 className={cx('font-reddit-mono text-[16px] font-bold')}>{children}</h3>;
+      return <h3 className={cx('font-reddit-mono text-[18px] font-bold')}>{children}</h3>;
     case 'body':
       return <p className={cx('font-reddit-mono text-[15px] font-normal')}>{children}</p>;
     case 'caption':

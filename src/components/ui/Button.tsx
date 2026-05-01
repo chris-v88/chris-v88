@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 import { toneStyles } from './colors';
-import { featureFlag, config } from '../../utils/featureFlags';
+import { isFlagActive, config } from '../../utils/featureFlags';
 
 export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral' | 'primary';
 export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
@@ -28,13 +28,11 @@ const displayStyles: Record<ButtonDisplay, string> = {
 
 const PIXEL_DISPLAYS: ButtonDisplay[] = ['fill', 'outline', 'menu'];
 
+const isRewrite = () => isFlagActive(config.ENABLE_REWRITE_2026);
+
 export const Button = (props: ButtonProps) => {
   const {
-    tone = featureFlag(
-      config.ENABLE_REWRITE_2026,
-      () => 'primary' as const,
-      () => 'info' as const
-    ),
+    tone = isRewrite() ? 'primary' : 'info',
     display = 'fill',
     children,
     className,
@@ -45,20 +43,16 @@ export const Button = (props: ButtonProps) => {
     download,
     ...rest
   } = props;
+
   const baseClasses =
     'cursor-pointer transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const displayClass = displayStyles[display];
   const toneClass = toneStyles[tone][display];
-  const pixelClass = PIXEL_DISPLAYS.includes(display)
-    ? featureFlag(
-        config.ENABLE_REWRITE_2026,
-        () => 'btn-pixel px-6 py-3',
-        () => ''
-      )
-    : '';
+  const pixelClass = PIXEL_DISPLAYS.includes(display) && isRewrite() ? 'btn-pixel px-6 py-3' : '';
 
-  const combinedClassName =
-    `${baseClasses} ${displayClass} ${toneClass} ${pixelClass} ${className || ''}`.trim();
+  const combinedClassName = [baseClasses, displayClass, toneClass, pixelClass, className]
+    .filter(Boolean)
+    .join(' ');
 
   if (href) {
     return (
