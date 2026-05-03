@@ -21,7 +21,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
           <a href="/">{logo}</a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-16">
+          <div className="sm:hidden md:hidden lg:flex items-center gap-16">
             {/* Nav links */}
             {navLinks.map((link) => (
               <Button
@@ -42,7 +42,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
 
           {/* Mobile Menu Button */}
           <Button
-            className="md:hidden text-gray-300"
+            className="lg:hidden text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -52,7 +52,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gray-700">
+          <div className="lg:hidden mt-4 py-4 border-t border-gray-700">
             {navLinks.map((link) => (
               <Button
                 key={link.href}
