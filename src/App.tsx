@@ -7,8 +7,9 @@ import Footer from './components/Footer';
 import Config from './pages/Config';
 import FeatureFlag from './components/FeatureFlag';
 import RewriteNavbar from './components/rewrite/RewriteNavbar';
-import { isFlagActive } from './utils/featureFlags';
+import { isFlagActive, Flag } from './utils/featureFlags';
 import { Text } from './components/ui';
+import RewriteHero from './rewrite_pages/RewriteHero';
 
 const App = () => {
   if (window.location.pathname === '/config') {
@@ -22,12 +23,12 @@ const App = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const isRewrite = isFlagActive('ENABLE_REWRITE_2026');
+  const isRewrite = isFlagActive(Flag.ENABLE_REWRITE_2026);
 
   return (
     <div className={`min-h-screen flex flex-col ${isRewrite ? 'rw-theme' : 'dark bg-black'}`}>
       <FeatureFlag
-        name="ENABLE_REWRITE_2026"
+        name={Flag.ENABLE_REWRITE_2026}
         feature={
           <RewriteNavbar
             logo={
@@ -41,7 +42,7 @@ const App = () => {
         backup={<Navbar />}
       />
       <main className="flex-grow">
-        <Hero />
+        {isRewrite ? <RewriteHero /> : <Hero />}
         <Experience />
         <Projects />
         <Contact />

@@ -80,6 +80,33 @@ body {
 }
 
 .btn-pixel:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* ── Pixel avatar frame ─────────────────────────────────── */
+/* outline/box-shadow are clipped by clip-path, so we use     */
+/* padding+background for the frame and filter for the shadow */
+.avatar-pixel {
+  display: inline-block;
+  padding: 6px;
+  background: #ffffff;
+  clip-path: polygon(
+    10px 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    10px calc(100% - 10px),
+    0% calc(100% - 10px),
+    0% 10px,
+    10px 10px
+  );
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.9));
+  image-rendering: pixelated;
+}
+
+.avatar-pixel img {
+  display: block;
 }

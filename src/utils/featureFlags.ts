@@ -11,7 +11,7 @@ export type FlagConfig = {
 
 export const flags: FlagConfig[] = flagsData.flags;
 
-export const config = {
+export const Flag = {
   ENABLE_REWRITE_2026: 'ENABLE_REWRITE_2026',
 } as const;
 

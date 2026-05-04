@@ -6,22 +6,9 @@ export type TextProps = {
   display: TextDisplay;
   children: ReactNode;
   className?: string;
-  // only used when display="custom"
-  fontFamily?: string;
-  fontSize?: string;
-  fontWeight?: 'normal' | 'bold' | number;
-  fontStyle?: 'normal' | 'italic';
 };
 
-export const Text = ({
-  display,
-  children,
-  className = '',
-  fontFamily,
-  fontSize,
-  fontWeight,
-  fontStyle,
-}: TextProps) => {
+export const Text = ({ display, children, className = '' }: TextProps) => {
   const cx = (base: string) => `${base} ${className}`.trim();
 
   switch (display) {
@@ -30,35 +17,23 @@ export const Text = ({
     case 'h2':
       return <h2 className={cx('font-pixelify-sans text-[20px] font-bold')}>{children}</h2>;
     case 'h3':
-      return <h3 className={cx('font-reddit-mono text-[18px] font-bold')}>{children}</h3>;
+      return <h3 className={cx('font-pixelify-sans text-[18px] font-bold')}>{children}</h3>;
     case 'body':
-      return <p className={cx('font-reddit-mono text-[15px] font-normal')}>{children}</p>;
+      return <p className={cx('font-pixelify-sans text-[15px] font-normal')}>{children}</p>;
     case 'caption':
-      return <span className={cx('font-reddit-mono text-[13px] font-normal')}>{children}</span>;
+      return <span className={cx('font-pixelify-sans text-[13px] font-normal')}>{children}</span>;
     case 'callout':
       return (
         <span
           className={cx(
-            'font-reddit-mono text-[18px] font-normal bg-[#22388C] text-white px-3 py-0.5 rounded-full inline-block'
+            'font-pixelify-sans text-[18px] font-normal bg-[#22388C] text-white px-3 py-0.5 rounded-full inline-block'
           )}
         >
           {children}
         </span>
       );
     case 'custom':
-      return (
-        <span
-          className={className}
-          style={{
-            fontFamily,
-            fontSize,
-            fontWeight,
-            fontStyle,
-          }}
-        >
-          {children}
-        </span>
-      );
+      return <span className={className}>{children}</span>;
     default:
       return null;
   }
