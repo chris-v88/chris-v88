@@ -1,9 +1,10 @@
 {
   "name": "Chris Vo",
   "title": "Software Engineer",
-  "bio": "Passionate software engineer with 4+ years of experience building scalable web applications. Specialized in React, TypeScript, Node.js.",
+  "bio": "I build performant web apps with a focus on clean APIs and great UX. Currently interested in roles that blend backend systems with product thinking.",
   "email": "vochris81@gmail.com",
   "location": "Philadelphia, PA",
   "linkedin": "https://www.linkedin.com/in/chrisvo3/",
-  "github": "https://github.com/chris-v88"
+  "github": "https://github.com/chris-v88",
+  "techStack": ["TypeScript", "React", "Node.js"]
 }

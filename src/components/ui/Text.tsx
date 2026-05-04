@@ -6,22 +6,9 @@ export type TextProps = {
   display: TextDisplay;
   children: ReactNode;
   className?: string;
-  // only used when display="custom"
-  fontFamily?: string;
-  fontSize?: string;
-  fontWeight?: 'normal' | 'bold' | number;
-  fontStyle?: 'normal' | 'italic';
 };
 
-export const Text = ({
-  display,
-  children,
-  className = '',
-  fontFamily,
-  fontSize,
-  fontWeight,
-  fontStyle,
-}: TextProps) => {
+export const Text = ({ display, children, className = '' }: TextProps) => {
   const cx = (base: string) => `${base} ${className}`.trim();
 
   switch (display) {
@@ -46,19 +33,7 @@ export const Text = ({
         </span>
       );
     case 'custom':
-      return (
-        <span
-          className={className}
-          style={{
-            fontFamily,
-            fontSize,
-            fontWeight,
-            fontStyle,
-          }}
-        >
-          {children}
-        </span>
-      );
+      return <span className={className}>{children}</span>;
     default:
       return null;
   }

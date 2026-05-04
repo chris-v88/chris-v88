@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 import { toneStyles } from './colors';
-import { isFlagActive, config } from '../../utils/featureFlags';
+import { isFlagActive, Flag } from '../../utils/featureFlags';
 
 export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral' | 'primary';
 export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
@@ -28,7 +28,7 @@ const displayStyles: Record<ButtonDisplay, string> = {
 
 const PIXEL_DISPLAYS: ButtonDisplay[] = ['fill', 'outline', 'menu'];
 
-const isRewrite = () => isFlagActive(config.ENABLE_REWRITE_2026);
+const isRewrite = () => isFlagActive(Flag.ENABLE_REWRITE_2026);
 
 export const Button = (props: ButtonProps) => {
   const {
