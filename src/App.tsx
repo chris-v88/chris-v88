@@ -9,7 +9,7 @@ import FeatureFlag from './components/FeatureFlag';
 import RewriteNavbar from './components/rewrite/RewriteNavbar';
 import { isFlagActive, Flag } from './utils/featureFlags';
 import { Text } from './components/ui';
-import ReWriteHero from './rewrite_pages/RewriteHero';
+import RewriteHero from './rewrite_pages/RewriteHero';
 
 const App = () => {
   if (window.location.pathname === '/config') {
@@ -42,7 +42,7 @@ const App = () => {
         backup={<Navbar />}
       />
       <main className="flex-grow">
-        <FeatureFlag name={Flag.ENABLE_REWRITE_2026} feature={<ReWriteHero />} backup={<Hero />} />
+        {isRewrite ? <RewriteHero /> : <Hero />}
         <Experience />
         <Projects />
         <Contact />

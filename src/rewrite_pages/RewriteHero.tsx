@@ -1,7 +1,7 @@
 import aboutData from '../data/about.json';
 import { Button, Text } from '../components/ui';
 
-const ReWriteHero = () => {
+const RewriteHero = () => {
   return (
     <section
       id="about"
@@ -49,7 +49,7 @@ const ReWriteHero = () => {
             {aboutData.location}
           </Text>
           <Text display="caption" className="text-gray-400">
-            {aboutData.techStack && aboutData.techStack.map((tech) => tech).join(' | ')}
+            {aboutData.techStack.join(' | ')}
           </Text>
         </div>
 
@@ -73,4 +73,4 @@ const ReWriteHero = () => {
     </section>
   );
 };
-export default ReWriteHero;
+export default RewriteHero;
