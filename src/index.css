@@ -22,10 +22,14 @@ body {
 /* ── Font utilities ──────────────────────────────────────── */
 .font-jersey {
   font-family: 'Jersey 15', 'Courier New', Courier, monospace;
+  letter-spacing: 0.125em;
+  word-spacing: 0.25em;
 }
 
 .font-reddit-mono {
   font-family: 'Reddit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.125em;
+  word-spacing: 0.25em;
 }
 
 .font-pixelify-sans {
@@ -52,6 +56,31 @@ body {
 
 .rw-navbar {
   background-color: rgba(22, 15, 15);
+}
+
+/* ── Pixel card ──────────────────────────────────────────── */
+/* Only top-right corner is notched; all others are square    */
+.card-pixel-clip {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.card-pixel {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% 100%,
+    0% 100%
+  );
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.6));
 }
 
 /* ── Pixel button ────────────────────────────────────────── */

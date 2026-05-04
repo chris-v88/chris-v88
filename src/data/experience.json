@@ -17,7 +17,8 @@
         "Zustand",
         "Formik",
         "Zod",
-        "Agile"
+        "GraphQL",
+        "REST API"
       ]
     },
     {
