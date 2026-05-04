@@ -10,6 +10,9 @@ const RewriteExperience = () => {
 
   return (
     <section id="experience" className="py-20 px-4">
+      <Text display="h1" className="text-gray-100 mb-10 text-center">
+        Experience & Education
+      </Text>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <section>
           <Text display="h2" className="text-gray-100 mb-6">
