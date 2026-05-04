@@ -30,12 +30,7 @@ const RewriteHero = () => {
           </div>
         </div>
 
-        <Text
-          display="custom"
-          className="font-press-start-2p text-[15px] md:text-[20px] font-normal"
-        >
-          Hi, I'm Chris.
-        </Text>
+        <Text display="h2">Hi, I'm Chris.</Text>
 
         <Text display="body" className="text-gray-300">
           {aboutData.bio}

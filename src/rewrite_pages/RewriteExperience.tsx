@@ -14,7 +14,7 @@ const RewriteExperience = () => {
         Experience & Education
       </Text>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <section>
+        <section id="work-experience">
           <Text display="h2" className="text-gray-100 mb-6">
             Experience
           </Text>
@@ -34,7 +34,7 @@ const RewriteExperience = () => {
                       rel="noopener noreferrer"
                       tone="info"
                     >
-                      <Text display="caption">{item.company}</Text>
+                      <Text display="caption">{item.company.toUpperCase()}</Text>
                     </Button>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const RewriteExperience = () => {
           </div>
         </section>
 
-        <section className="mt-16 md:mt-0">
+        <section id="education" className="mt-16 md:mt-0">
           <Text display="h2" className="text-gray-100 mb-6">
             Education
           </Text>
@@ -80,7 +80,7 @@ const RewriteExperience = () => {
                     <PixelIcon name="education" className="mt-0.5" />
                     <div className="flex-1">
                       <Text display="h3" className="text-gray-100">
-                        {item.school}
+                        {item.field}
                       </Text>
                       <Button
                         display="link"
@@ -89,7 +89,7 @@ const RewriteExperience = () => {
                         rel="noopener noreferrer"
                         tone="success"
                       >
-                        <Text display="caption">{item.field}</Text>
+                        <Text display="caption">{item.school.toUpperCase()}</Text>
                       </Button>
                     </div>
                   </div>
