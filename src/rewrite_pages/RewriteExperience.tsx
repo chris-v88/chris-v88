@@ -14,7 +14,7 @@ const RewriteExperience = () => {
         Experience & Education
       </Text>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <section>
+        <section id="work-experience">
           <Text display="h2" className="text-gray-100 mb-6">
             Experience
           </Text>
@@ -67,7 +67,7 @@ const RewriteExperience = () => {
           </div>
         </section>
 
-        <section className="mt-16 md:mt-0">
+        <section id="education" className="mt-16 md:mt-0">
           <Text display="h2" className="text-gray-100 mb-6">
             Education
           </Text>
