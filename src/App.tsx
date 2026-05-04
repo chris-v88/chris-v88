@@ -42,10 +42,18 @@ const App = () => {
         backup={<Navbar />}
       />
       <main className="flex-grow">
-        {isRewrite ? <RewriteHero /> : <Hero />}
-        <Experience />
-        <Projects />
-        <Contact />
+        <FeatureFlag
+          name={Flag.ENABLE_REWRITE_2026}
+          feature={<RewriteHero />}
+          backup={
+            <>
+              <Hero />
+              <Experience />
+              <Projects />
+              <Contact />
+            </>
+          }
+        />
       </main>
       <Footer />
     </div>
