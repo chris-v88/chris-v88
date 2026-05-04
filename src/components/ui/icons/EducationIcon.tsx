@@ -1,0 +1,47 @@
+const EducationIcon = () => (
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    className="shrink-0"
+  >
+    <path
+      d="M38.0875 9.51251H36.1875V13.325H32.375V15.2375H28.5625V17.1375H32.375V22.85H30.475V24.7625H32.375V28.5625H34.275V15.2375H36.1875V32.375H34.275V40H40V32.375H38.0875V9.51251Z"
+      fill="currentColor"
+    />
+    <path d="M36.1875 7.61249H32.375V9.51249H36.1875V7.61249Z" fill="currentColor" />
+    <path d="M32.3751 28.5625H30.4751V30.475H32.3751V28.5625Z" fill="currentColor" />
+    <path d="M32.375 11.425H24.75V13.325H32.375V11.425Z" fill="currentColor" />
+    <path d="M32.375 5.71252H28.5625V7.61252H32.375V5.71252Z" fill="currentColor" />
+    <path d="M30.4751 30.475H26.6626V32.375H30.4751V30.475Z" fill="currentColor" />
+    <path d="M30.4751 24.7625H26.6626V26.6625H30.4751V24.7625Z" fill="currentColor" />
+    <path d="M28.5625 17.1375H24.75V19.0375H28.5625V17.1375Z" fill="currentColor" />
+    <path d="M28.5625 3.79999H24.75V5.71249H28.5625V3.79999Z" fill="currentColor" />
+    <path d="M26.6623 32.375H11.4248V34.275H26.6623V32.375Z" fill="currentColor" />
+    <path d="M26.6623 26.6625H11.4248V28.5625H26.6623V26.6625Z" fill="currentColor" />
+    <path d="M24.7502 19.0375H20.9502V20.95H24.7502V19.0375Z" fill="currentColor" />
+    <path d="M24.7502 9.51251H17.1377V11.425H24.7502V9.51251Z" fill="currentColor" />
+    <path d="M24.7502 1.90002H20.9502V3.80002H24.7502V1.90002Z" fill="currentColor" />
+    <path d="M20.9502 0H17.1377V1.9H20.9502V0Z" fill="currentColor" />
+    <path d="M20.9502 20.95H17.1377V22.85H20.9502V20.95Z" fill="currentColor" />
+    <path d="M17.1377 1.90002H13.3252V3.80002H17.1377V1.90002Z" fill="currentColor" />
+    <path d="M17.1377 19.0375H13.3252V20.95H17.1377V19.0375Z" fill="currentColor" />
+    <path d="M13.3252 3.79999H9.5127V5.71249H13.3252V3.79999Z" fill="currentColor" />
+    <path d="M11.4248 30.475H7.6123V32.375H11.4248V30.475Z" fill="currentColor" />
+    <path d="M11.4248 24.7625H7.6123V26.6625H11.4248V24.7625Z" fill="currentColor" />
+    <path d="M13.3252 17.1375H9.5127V19.0375H13.3252V17.1375Z" fill="currentColor" />
+    <path d="M9.5124 5.71252H5.7124V7.61252H9.5124V5.71252Z" fill="currentColor" />
+    <path d="M7.6124 28.5625H5.7124V30.475H7.6124V28.5625Z" fill="currentColor" />
+    <path
+      d="M7.6124 24.7625V22.85H5.7124V17.1375H9.5124V15.2375H5.7124V13.325H1.8999V15.2375H3.7999V28.5625H5.7124V24.7625H7.6124Z"
+      fill="currentColor"
+    />
+    <path d="M5.7124 7.61249H1.8999V9.51249H5.7124V7.61249Z" fill="currentColor" />
+    <path d="M1.9 9.51251H0V13.325H1.9V9.51251Z" fill="currentColor" />
+  </svg>
+);
+
+export default EducationIcon;

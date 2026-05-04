@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './pages/Hero';
 import { Experience } from './pages/Experience';
+import RewriteExperience from './rewrite_pages/RewriteExperience';
 import { Projects } from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
@@ -44,7 +45,14 @@ const App = () => {
       <main className="flex-grow">
         <FeatureFlag
           name={Flag.ENABLE_REWRITE_2026}
-          feature={<RewriteHero />}
+          feature={
+            <>
+              <RewriteHero />
+              <RewriteExperience />
+              <Projects />
+              <Contact />
+            </>
+          }
           backup={
             <>
               <Hero />

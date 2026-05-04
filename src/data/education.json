@@ -1,17 +1,6 @@
 {
   "education": [
     {
-      "id": "4",
-      "school": "FUNiX",
-      "website": "https://funix.edu.vn/funix-program/lap-trinh-phan-mem-o-to-automotive-app-developer/",
-      "degree": "Certificate",
-      "field": "Automotive Application Developer",
-      "location": "Online",
-      "startDate": "01-2026",
-      "endDate": null,
-      "skills": ["C++", "Qt"]
-    },
-    {
       "id": "3",
       "school": "CyberSoft",
       "website": "https://cybersoft.edu.vn/lap-trinh-back-end-nodejs-viet-api-thuc-te/",

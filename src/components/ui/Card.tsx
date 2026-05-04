@@ -18,7 +18,7 @@ const toneFillStyles: Record<CardTone, string> = {
   success: 'bg-green-400 text-white',
   caution: 'bg-red-400 text-white',
   warning: 'bg-orange-400 text-black',
-  neutral: 'bg-gray-200 text-gray-800',
+  neutral: 'bg-[#2a2a2a] text-white',
 };
 
 const toneAccentBg: Record<CardTone, string> = {
@@ -27,7 +27,7 @@ const toneAccentBg: Record<CardTone, string> = {
   success: 'bg-green-400',
   caution: 'bg-red-400',
   warning: 'bg-orange-400',
-  neutral: 'bg-gray-400',
+  neutral: 'bg-[#2a2a2a]',
 };
 
 const sizeStyles: Record<CardSize, string> = {
@@ -47,7 +47,7 @@ export const Card = ({
   if (type === 'outline') {
     return (
       <div className={`card-pixel ${toneAccentBg[tone]} ${sizeClass}`}>
-        <div className={`card-pixel bg-white m-0.75 p-4 ${className}`}>{children}</div>
+        <div className={`card-pixel bg-[#2a2a2a] m-0.75 p-4 ${className}`}>{children}</div>
       </div>
     );
   }

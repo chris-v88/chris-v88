@@ -55,21 +55,15 @@ body {
 }
 
 /* ── Pixel card ──────────────────────────────────────────── */
-/* Same notched corners as btn-pixel, shadow via filter       */
+/* Only top-right corner is notched; all others are square    */
 .card-pixel {
   clip-path: polygon(
-    10px 0%,
+    0% 0%,
     calc(100% - 10px) 0%,
     calc(100% - 10px) 10px,
     100% 10px,
-    100% calc(100% - 10px),
-    calc(100% - 10px) calc(100% - 10px),
-    calc(100% - 10px) 100%,
-    10px 100%,
-    10px calc(100% - 10px),
-    0% calc(100% - 10px),
-    0% 10px,
-    10px 10px
+    100% 100%,
+    0% 100%
   );
   filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.6));
 }
