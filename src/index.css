@@ -54,6 +54,26 @@ body {
   background-color: rgba(22, 15, 15);
 }
 
+/* ── Pixel card ──────────────────────────────────────────── */
+/* Same notched corners as btn-pixel, shadow via filter       */
+.card-pixel {
+  clip-path: polygon(
+    10px 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% calc(100% - 10px),
+    calc(100% - 10px) calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    10px 100%,
+    10px calc(100% - 10px),
+    0% calc(100% - 10px),
+    0% 10px,
+    10px 10px
+  );
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.6));
+}
+
 /* ── Pixel button ────────────────────────────────────────── */
 /* Right-angle concave (inverted) notch at each corner */
 .btn-pixel {

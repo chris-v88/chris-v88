@@ -1,4 +1,5 @@
 export { Button } from './Button';
+export { Card, type CardTone, type CardSize, type CardType, type CardProps } from './Card';
 export { Modal } from './Modal';
 export { Icon } from './Icon';
 export { ExperienceCard, type ExperienceCardProps } from './ExperienceCard';
