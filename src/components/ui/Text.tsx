@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export type TextDisplay = 'h1' | 'h2' | 'h3' | 'body' | 'caption' | 'callout' | 'custom';
+export type TextDisplay = 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'callout' | 'custom';
 
 export type TextProps = {
   display: TextDisplay;
@@ -13,11 +13,13 @@ export const Text = ({ display, children, className = '' }: TextProps) => {
 
   switch (display) {
     case 'h1':
-      return <h1 className={cx('font-jersey text-[30px] font-normal')}>{children}</h1>;
+      return <h1 className={cx('font-press-start-2p font-normal')}>{children}</h1>;
     case 'h2':
-      return <h2 className={cx('font-pixelify-sans text-[20px] font-bold')}>{children}</h2>;
+      return <h2 className={cx('font-press-start-2p font-bold')}>{children}</h2>;
     case 'h3':
-      return <h3 className={cx('font-pixelify-sans text-[18px] font-bold')}>{children}</h3>;
+      return <h3 className={cx('font-press-start-2p font-bold')}>{children}</h3>;
+    case 'h4':
+      return <h4 className={cx('font-press-start-2p font-bold')}>{children}</h4>;
     case 'body':
       return <p className={cx('font-pixelify-sans text-[15px] font-normal')}>{children}</p>;
     case 'caption':

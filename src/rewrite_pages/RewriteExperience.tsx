@@ -24,7 +24,7 @@ const RewriteExperience = () => {
                 <div className="flex items-start gap-3 mb-3">
                   <PixelIcon name="work" className="mt-0.5" />
                   <div className="flex-1">
-                    <Text display="h3" className="text-gray-100">
+                    <Text display="h4" className="text-gray-100">
                       {item.position}
                     </Text>
                     <Button
@@ -34,7 +34,7 @@ const RewriteExperience = () => {
                       rel="noopener noreferrer"
                       tone="info"
                     >
-                      <Text display="caption">{item.company}</Text>
+                      <Text display="caption">{item.company.toUpperCase()}</Text>
                     </Button>
                   </div>
                 </div>
@@ -79,8 +79,8 @@ const RewriteExperience = () => {
                   <div className="flex items-start gap-3 mb-3">
                     <PixelIcon name="education" className="mt-0.5" />
                     <div className="flex-1">
-                      <Text display="h3" className="text-gray-100">
-                        {item.school}
+                      <Text display="h4" className="text-gray-100">
+                        {item.field}
                       </Text>
                       <Button
                         display="link"
@@ -89,7 +89,7 @@ const RewriteExperience = () => {
                         rel="noopener noreferrer"
                         tone="success"
                       >
-                        <Text display="caption">{item.field}</Text>
+                        <Text display="caption">{item.school.toUpperCase()}</Text>
                       </Button>
                     </div>
                   </div>
