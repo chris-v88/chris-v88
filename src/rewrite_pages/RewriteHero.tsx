@@ -5,9 +5,31 @@ const ReWriteHero = () => {
   return (
     <section
       id="about"
-      className="h-screen flex items-center justify-center pt-20 px-6 sm:px-12 lg:px-28"
+      className="h-screen flex flex-col justify-center pt-20 px-6 sm:px-12 lg:px-28"
     >
-      <div className="flex flex-col items-start gap-6 w-full max-w-3xl">
+      <div className="flex flex-col items-start gap-6 w-full max-w-3xl mx-auto">
+        {/* Avatar — sits just above the heading, centered */}
+        <div className="self-center mb-2">
+          <div className="block lg:hidden">
+            <div className="avatar-pixel">
+              <img
+                src="/images/pixel-me-short.png"
+                alt="Chris's pixel avatar"
+                className="h-24 w-auto"
+              />
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <div className="avatar-pixel">
+              <img
+                src="/images/pixel-me-tall.png"
+                alt="Chris's pixel avatar"
+                className="h-52 w-auto"
+              />
+            </div>
+          </div>
+        </div>
+
         <Text
           display="custom"
           className="font-press-start-2p text-[15px] md:text-[20px] font-normal"
