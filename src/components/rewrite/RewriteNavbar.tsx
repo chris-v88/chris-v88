@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react';
-import { Button, Icon, Text } from '../ui';
+import { Button, Icon } from '../ui';
 
 export type NavLinkItemType = {
   label: string;
@@ -21,7 +21,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
           <a href="/">{logo}</a>
 
           {/* Desktop Navigation */}
-          <div className="sm:hidden md:hidden lg:flex items-center gap-16">
+          <div className="hidden lg:flex items-center gap-16">
             {/* Nav links */}
             {navLinks.map((link) => (
               <Button
@@ -30,13 +30,13 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
                 href={link.href}
                 className="font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
-                <Text display="h2">{link.label}</Text>
+                <span className="font-pixelify-sans text-[20px] font-bold">{link.label}</span>
               </Button>
             ))}
 
             {/* Resume */}
             <Button href="/docs/Chris-Vo_resume-04-2026.pdf" download>
-              <Text display="h2">Resume</Text>
+              <span className="font-pixelify-sans text-[20px] font-bold">Resume</span>
             </Button>
           </div>
 
@@ -45,6 +45,8 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
             className="lg:hidden text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
           >
             <Icon name={isMenuOpen ? 'X' : 'Menu'} />
           </Button>
@@ -52,7 +54,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-gray-700">
+          <div id="mobile-nav" className="lg:hidden mt-4 py-4 border-t border-gray-700">
             {navLinks.map((link) => (
               <Button
                 key={link.href}
@@ -60,7 +62,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
                 href={link.href}
                 className="block w-full text-left font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
-                <Text display="h2">{link.label}</Text>
+                <span className="font-pixelify-sans text-[20px] font-bold">{link.label}</span>
               </Button>
             ))}
             <Button
@@ -68,7 +70,7 @@ const RewriteNavbar = ({ logo, navLinks }: RewriteNavbarProps) => {
               download
               className="block w-full text-left font-medium text-gray-300 hover:text-gray-100 transition-colors mt-2"
             >
-              <Text display="h2">Resume</Text>
+              <span className="font-pixelify-sans text-[20px] font-bold">Resume</span>
             </Button>
           </div>
         )}

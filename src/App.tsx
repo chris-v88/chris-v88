@@ -31,12 +31,7 @@ const App = () => {
         feature={
           <RewriteNavbar
             logo={
-              <Text
-                display="custom"
-                fontFamily="'Press Start 2P', monospace"
-                fontSize="25px"
-                fontWeight="normal"
-              >
+              <Text display="custom" className="font-press-start-2p text-[25px] font-normal">
                 Chris Vo
               </Text>
             }
