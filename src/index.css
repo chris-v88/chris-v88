@@ -22,10 +22,14 @@ body {
 /* ── Font utilities ──────────────────────────────────────── */
 .font-jersey {
   font-family: 'Jersey 15', 'Courier New', Courier, monospace;
+  letter-spacing: 0.125em;
+  word-spacing: 0.25em;
 }
 
 .font-reddit-mono {
   font-family: 'Reddit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.125em;
+  word-spacing: 0.25em;
 }
 
 .font-pixelify-sans {
