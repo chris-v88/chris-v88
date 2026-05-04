@@ -21,7 +21,7 @@ export const Text = ({ display, children, className = '' }: TextProps) => {
     case 'body':
       return <p className={cx('font-pixelify-sans text-[15px] font-normal')}>{children}</p>;
     case 'caption':
-      return <span className={cx('font-pixelify-sans text-[13px] font-normal')}>{children}</span>;
+      return <span className={cx('font-pixelify-sans text-[14px] font-normal')}>{children}</span>;
     case 'callout':
       return (
         <span

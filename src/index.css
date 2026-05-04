@@ -30,13 +30,15 @@ body {
 
 .font-pixelify-sans {
   font-family: 'Pixelify Sans', 'Courier New', Courier, monospace;
+  letter-spacing: 0.125em;
+  word-spacing: 0.25em;
 }
 
 .font-press-start-2p {
   font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
 }
 
-/* ── Rewrite theme ───────────────────────────────────────── */
+/* ── Rewrite theme ──────å─────────────────────────────────── */
 .rw-theme {
   --rw-bg: #160f0f;
   --rw-container-bg: #949494;
