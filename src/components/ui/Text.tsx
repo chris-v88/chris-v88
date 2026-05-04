@@ -26,7 +26,7 @@ export const Text = ({ display, children, className = '' }: TextProps) => {
       return (
         <span
           className={cx(
-            'font-pixelify-sans text-[18px] font-normal bg-[#22388C] text-white px-3 py-0.5 rounded-full inline-block'
+            'font-pixelify-sans text-[14px] font-normal bg-[#22388C] text-white px-3 py-0.5 rounded-full inline-block'
           )}
         >
           {children}

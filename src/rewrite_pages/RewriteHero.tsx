@@ -48,9 +48,22 @@ const RewriteHero = () => {
           <Text display="caption" className="text-gray-400">
             {aboutData.location}
           </Text>
-          <Text display="caption" className="text-gray-400">
-            {aboutData.techStack.join(' | ')}
-          </Text>
+          {aboutData.techStack.length > 0 && (
+            <div className="flex flex-row items-center gap-2">
+              {aboutData.techStack.map((tech, i) => (
+                <>
+                  <Text key={tech} display="callout">
+                    {tech}
+                  </Text>
+                  {i < aboutData.techStack.length - 1 && (
+                    <Text key={`sep-${i}`} display="caption" className="text-gray-400">
+                      |
+                    </Text>
+                  )}
+                </>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="mt-4 flex flex-col md:flex-row md:items-center gap-6">
