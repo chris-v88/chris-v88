@@ -56,6 +56,17 @@ body {
 
 /* ── Pixel card ──────────────────────────────────────────── */
 /* Only top-right corner is notched; all others are square    */
+.card-pixel-clip {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 10px) 0%,
+    calc(100% - 10px) 10px,
+    100% 10px,
+    100% 100%,
+    0% 100%
+  );
+}
+
 .card-pixel {
   clip-path: polygon(
     0% 0%,

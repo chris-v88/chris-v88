@@ -1,6 +1,5 @@
-import WorkIcon from './icons/WorkIcon';
-import EducationIcon from './icons/EducationIcon';
-import type { JSX } from 'react';
+import workSrc from './icons/work.svg';
+import educationSrc from './icons/education.svg';
 
 export type PixelIconName = 'work' | 'education';
 
@@ -9,18 +8,13 @@ type PixelIconProps = {
   className?: string;
 };
 
-const iconMap: Record<PixelIconName, () => JSX.Element> = {
-  work: WorkIcon,
-  education: EducationIcon,
+const iconMap: Record<PixelIconName, string> = {
+  work: workSrc,
+  education: educationSrc,
 };
 
-export const PixelIcon = ({ name, className = '' }: PixelIconProps) => {
-  const IconComponent = iconMap[name];
-  return (
-    <span className={className}>
-      <IconComponent />
-    </span>
-  );
-};
+export const PixelIcon = ({ name, className = '' }: PixelIconProps) => (
+  <img src={iconMap[name]} className={className} alt="" />
+);
 
 export default PixelIcon;

@@ -46,8 +46,8 @@ export const Card = ({
 
   if (type === 'outline') {
     return (
-      <div className={`card-pixel ${toneAccentBg[tone]} ${sizeClass}`}>
-        <div className={`card-pixel bg-[#2a2a2a] m-0.75 p-4 ${className}`}>{children}</div>
+      <div className={`card-pixel ${toneAccentBg[tone]} ${sizeClass} ${className}`}>
+        <div className="card-pixel-clip bg-[#2a2a2a] m-0.75 p-4">{children}</div>
       </div>
     );
   }

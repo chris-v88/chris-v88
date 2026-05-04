@@ -1,39 +1,15 @@
 import experienceData from '../data/experience.json';
 import educationData from '../data/education.json';
-import { Card, Text, Icon, Button } from '../components/ui';
-import { PixelIcon } from '../components/ui/PixelIcons';
+import { Card, Text, Icon, Button, PixelIcon } from '../components/ui';
 import { formatDateRange } from '../utils/helpers';
-
-export type WorkExperience = {
-  id: string;
-  company: string;
-  website: string;
-  position: string;
-  location: string;
-  startDate: string;
-  endDate: string | null;
-  description: string;
-  technologies: string[];
-};
-
-export type Education = {
-  id: string;
-  school: string;
-  website: string;
-  degree: string;
-  field: string;
-  location: string;
-  startDate: string | null;
-  endDate: string | null;
-  skills: string[];
-};
+import type { WorkExperience, Education } from '../pages/Experience';
 
 const RewriteExperience = () => {
   const workExperience = experienceData.workExperience as WorkExperience[];
   const education = educationData.education as Education[];
 
   return (
-    <section id="experience" className="bg-neutral-950 py-20 px-4">
+    <section id="experience" className="py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <section>
           <Text display="h2" className="text-gray-100 mb-6">
@@ -43,7 +19,7 @@ const RewriteExperience = () => {
             {workExperience.map((item) => (
               <Card key={item.id} size="wide">
                 <div className="flex items-start gap-3 mb-3">
-                  <PixelIcon name="work" className="text-blue-400 mt-0.5" />
+                  <PixelIcon name="work" className="mt-0.5" />
                   <div className="flex-1">
                     <Text display="h3" className="text-gray-100">
                       {item.position}
@@ -98,7 +74,7 @@ const RewriteExperience = () => {
               .map((item) => (
                 <Card key={item.id} size="wide">
                   <div className="flex items-start gap-3 mb-3">
-                    <PixelIcon name="education" className="text-green-500 mt-0.5" />
+                    <PixelIcon name="education" className="mt-0.5" />
                     <div className="flex-1">
                       <Text display="h3" className="text-gray-100">
                         {item.school}
