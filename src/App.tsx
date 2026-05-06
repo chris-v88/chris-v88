@@ -5,7 +5,9 @@ import RewriteExperience from './rewrite_pages/RewriteExperience';
 import { Projects } from './pages/Projects';
 import RewriteProjects from './rewrite_pages/RewriteProjects';
 import Contact from './pages/Contact';
+import RewriteContact from './rewrite_pages/RewriteContact';
 import Footer from './components/Footer';
+import RewriteFooter from './components/rewrite/RewriteFooter';
 import Config from './pages/Config';
 import FeatureFlag from './components/FeatureFlag';
 import RewriteNavbar from './components/rewrite/RewriteNavbar';
@@ -42,7 +44,7 @@ const App = () => {
               <RewriteHero />
               <RewriteExperience />
               <RewriteProjects />
-              <Contact />
+              <RewriteContact />
             </>
           }
           backup={
@@ -55,7 +57,11 @@ const App = () => {
           }
         />
       </main>
-      <Footer />
+      <FeatureFlag
+        name={Flag.ENABLE_REWRITE_2026}
+        feature={<RewriteFooter />}
+        backup={<Footer />}
+      />
     </div>
   );
 };
