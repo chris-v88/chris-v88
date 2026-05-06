@@ -3,6 +3,7 @@ import Hero from './pages/Hero';
 import { Experience } from './pages/Experience';
 import RewriteExperience from './rewrite_pages/RewriteExperience';
 import { Projects } from './pages/Projects';
+import RewriteProjects from './rewrite_pages/RewriteProjects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Config from './pages/Config';
@@ -40,7 +41,7 @@ const App = () => {
             <>
               <RewriteHero />
               <RewriteExperience />
-              <Projects />
+              <RewriteProjects />
               <Contact />
             </>
           }
