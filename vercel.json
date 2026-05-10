@@ -11,6 +11,7 @@
   "framework": "vite",
   "rewrites": [
     { "source": "/version", "destination": "/version.json" },
-    { "source": "/config", "destination": "/index.html" }
+    { "source": "/config", "destination": "/index.html" },
+    { "source": "/docs", "destination": "/index.html" }
   ]
 }

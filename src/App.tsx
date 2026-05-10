@@ -9,6 +9,7 @@ import RewriteContact from './rewrite_pages/RewriteContact';
 import Footer from './components/Footer';
 import RewriteFooter from './components/rewrite/RewriteFooter';
 import Config from './pages/Config';
+import Docs from './pages/Docs';
 import FeatureFlag from './components/FeatureFlag';
 import RewriteNavbar from './components/rewrite/RewriteNavbar';
 import { isFlagActive, Flag } from './utils/featureFlags';
@@ -18,6 +19,10 @@ import RewriteHero from './rewrite_pages/RewriteHero';
 const App = () => {
   if (window.location.pathname === '/config') {
     return <Config />;
+  }
+
+  if (window.location.pathname === '/docs') {
+    return <Docs />;
   }
 
   const navLinks = [
