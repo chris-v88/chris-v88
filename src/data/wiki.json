@@ -1,22 +1,22 @@
 {
-    "wiki": [
-        {
-            "name": "TypeScript Full-Stack",
-            "link": "https://typescript-prep.netlify.app/",
-            "description": "A full-stack TypeScript showcase featuring a React frontend, Nx monorepo structure, Dockerized services, and a SQL-backed Node.js API.",
-            "stack": ["TypeScript", "React", "Nx", "Docker", "Node.js", "SQL"]
-        },
-        {
-            "name": "Java Full-Stack",
-            "link": "https://java-n-springboot.netlify.app/",
-            "description": "A Java and Spring Boot full-stack project demonstrating robust backend architecture, cloud deployment on AWS, and SQL data management.",
-            "stack": ["Java", "Spring Boot", "SQL", "AWS"]
-        },
-        {
-            "name": "C++ Full Stack and JUCE",
-            "link": "https://cpp-n-juce.netlify.app/",
-            "description": "A C++ and JUCE-based full-stack concept for music software development, showcasing audio processing capabilities.",
-            "stack": ["C++", "JUCE", "SQL", "AWS"]
-        }
-    ]
+  "wiki": [
+    {
+      "name": "TypeScript Full-Stack",
+      "link": "https://typescript-prep.netlify.app/",
+      "description": "A full-stack TypeScript showcase featuring a React frontend, Nx monorepo structure, Dockerized services, and a SQL-backed Node.js API.",
+      "stack": ["TypeScript", "React", "Nx", "Docker", "Node.js", "SQL"]
+    },
+    {
+      "name": "Java Full-Stack",
+      "link": "https://java-n-springboot.netlify.app/",
+      "description": "A Java and Spring Boot full-stack project demonstrating robust backend architecture, cloud deployment on AWS, and SQL data management.",
+      "stack": ["Java", "Spring Boot", "SQL", "AWS"]
+    },
+    {
+      "name": "C++ Full Stack and JUCE",
+      "link": "https://cpp-n-juce.netlify.app/",
+      "description": "A C++ and JUCE-based full-stack concept for music software development, showcasing audio processing capabilities.",
+      "stack": ["C++", "JUCE", "SQL", "AWS"]
+    }
+  ]
 }

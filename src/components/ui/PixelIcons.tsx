@@ -11,8 +11,8 @@ type PixelIconProps = {
 };
 
 const iconMap: Record<PixelIconName, string> = {
-  'work': workSrc,
-  'education': educationSrc,
+  work: workSrc,
+  education: educationSrc,
   'lock-locked': lockLockedSrc,
   'lock-unlocked': lockUnlockedSrc,
 };

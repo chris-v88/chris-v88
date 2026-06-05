@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import wikiData from '../data/wiki.json';
 
 type WikiEntry = {
@@ -10,13 +10,7 @@ type WikiEntry = {
 
 export default function WikiPage() {
   const entries = wikiData.wiki as WikiEntry[];
-  const [selectedEntry, setSelectedEntry] = useState<WikiEntry | null>(null);
-
-  useEffect(() => {
-    if (entries.length > 0) {
-      setSelectedEntry(entries[0]);
-    }
-  }, [entries]);
+  const [selectedEntry, setSelectedEntry] = useState<WikiEntry | null>(entries[0] ?? null);
 
   return (
     <div className="rw-theme min-h-screen bg-[#160f0f] p-4 sm:p-8">
@@ -25,10 +19,14 @@ export default function WikiPage() {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Left Page - Index */}
           <div className="flex-1 bg-white rounded-xl shadow-2xl p-8 border-4 border-neutral-900 relative">
-            <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
-              backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 2px, #000 2px, #000 4px)',
-            }}></div>
-            
+            <div
+              className="absolute inset-0 opacity-5 pointer-events-none"
+              style={{
+                backgroundImage:
+                  'repeating-linear-gradient(90deg, transparent, transparent 2px, #000 2px, #000 4px)',
+              }}
+            ></div>
+
             <h2 className="relative z-10 sm:text-xl font-press-start-2p text-neutral-900 mb-6 border-b-4 border-neutral-900 pb-3">
               Index
             </h2>
@@ -52,9 +50,13 @@ export default function WikiPage() {
 
           {/* Right Page - Content */}
           <div className="flex-1 bg-white rounded-xl shadow-2xl p-8 border-4 border-neutral-900 relative">
-            <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
-              backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 2px, #000 2px, #000 4px)',
-            }}></div>
+            <div
+              className="absolute inset-0 opacity-5 pointer-events-none"
+              style={{
+                backgroundImage:
+                  'repeating-linear-gradient(90deg, transparent, transparent 2px, #000 2px, #000 4px)',
+              }}
+            ></div>
 
             {selectedEntry ? (
               <div className="relative z-10">

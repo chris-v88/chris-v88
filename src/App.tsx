@@ -14,25 +14,27 @@ import Docs from './pages/Docs';
 import FeatureFlag from './components/FeatureFlag';
 import RewriteNavbar from './components/rewrite/RewriteNavbar';
 import { isFlagActive, Flag } from './utils/featureFlags';
-import { Icon, PixelIcon, Text } from './components/ui';
+import { PixelIcon, Text } from './components/ui';
 import RewriteHero from './rewrite_pages/RewriteHero';
 import { useState } from 'react';
 import Wiki from './pages/Wiki';
 
 const App = () => {
-  if (window.location.pathname === '/config') {
+  const pathname = window.location.pathname;
+  const [lockOpen, setLockOpen] = useState(false);
+
+  if (pathname === '/config') {
     return <Config />;
   }
 
-  if (window.location.pathname === '/wiki') {
+  if (pathname === '/wiki') {
     return <Wiki />;
   }
 
-  if (window.location.pathname === '/docs') {
+  if (pathname === '/docs') {
     return <Docs />;
   }
 
-  const [lockOpen, setLockOpen] = useState(false);
   const hiddenLinkClass = `rounded-full ${lockOpen ? 'bg-white/20' : 'bg-white/5'} px-4 py-2 text-sm text-white backdrop-blur-sm ${lockOpen ? 'opacity-100' : 'opacity-30'} transition hover:opacity-100 hover:bg-white/30`;
   const lockIconClass = `fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm ${lockOpen ? 'opacity-100' : 'opacity-30'} transition hover:opacity-100 hover:bg-white/30`;
 
@@ -81,12 +83,16 @@ const App = () => {
       />
       <FeatureFlag
         name={Flag.ENABLE_HIDDEN_LINK}
-        feature={(
+        feature={
           <div>
             {lockOpen && (
               <div className="fixed bottom-20 right-6 z-50 flex flex-col items-end gap-2">
-                <a href="/config" className={hiddenLinkClass}>Config</a>
-                <a href="/wiki" className={hiddenLinkClass}>Wiki</a>
+                <a href="/config" className={hiddenLinkClass}>
+                  Config
+                </a>
+                <a href="/wiki" className={hiddenLinkClass}>
+                  Wiki
+                </a>
               </div>
             )}
             <button
@@ -97,7 +103,8 @@ const App = () => {
               <PixelIcon name={lockOpen ? 'lock-unlocked' : 'lock-locked'} className="h-6 w-6" />
             </button>
           </div>
-        )} />
+        }
+      />
     </div>
   );
 };
