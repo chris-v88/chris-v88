@@ -8,7 +8,7 @@
     },
     {
       "name": "ENABLE_HIDDEN_LINK",
-      "enabled": false,
+      "enabled": true,
       "expires": "2026-07-20",
       "description": "Enable the hidden link feature in the 2026"
     }
