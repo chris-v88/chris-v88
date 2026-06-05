@@ -13,6 +13,7 @@ export const flags: FlagConfig[] = flagsData.flags;
 
 export const Flag = {
   ENABLE_REWRITE_2026: 'ENABLE_REWRITE_2026',
+  ENABLE_HIDDEN_LINK: 'ENABLE_HIDDEN_LINK',
 } as const;
 
 /**

@@ -3,8 +3,14 @@
     {
       "name": "ENABLE_REWRITE_2026",
       "enabled": true,
-      "expires": "2026-12-31",
+      "expires": "2026-06-15",
       "description": "Enable the 2026 rewrite of the portfolio"
+    },
+    {
+      "name": "ENABLE_HIDDEN_LINK",
+      "enabled": false,
+      "expires": "2026-07-20",
+      "description": "Enable the hidden link feature in the 2026"
     }
   ]
 }
