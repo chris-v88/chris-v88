@@ -12,6 +12,7 @@
   "rewrites": [
     { "source": "/version", "destination": "/version.json" },
     { "source": "/config", "destination": "/index.html" },
+    { "source": "/wiki", "destination": "/index.html" },
     { "source": "/docs", "destination": "/index.html" }
   ]
 }
