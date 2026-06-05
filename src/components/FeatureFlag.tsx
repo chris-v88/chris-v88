@@ -3,8 +3,8 @@ import { isFlagActive } from '../utils/featureFlags';
 
 interface FeatureFlagProps {
   name: string;
-  feature: ReactNode;
-  backup: ReactNode;
+  feature?: ReactNode;
+  backup?: ReactNode;
 }
 
 /**

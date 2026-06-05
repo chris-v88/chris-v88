@@ -14,8 +14,8 @@ const H2 = ({ children }: { children: ReactNode }) => (
 const H3 = ({ children }: { children: ReactNode }) => (
   <h3 className="text-lg font-semibold text-gray-200 mt-8 mb-3">{children}</h3>
 );
-const P = ({ children }: { children: ReactNode }) => (
-  <p className="text-gray-400 leading-7 mb-4">{children}</p>
+const P = ({ children, className }: { children: ReactNode; className?: string }) => (
+  <p className={`text-gray-400 leading-7 mb-4 ${className || ''}`}>{children}</p>
 );
 const Code = ({ children }: { children: ReactNode }) => (
   <code className="bg-neutral-800 text-blue-300 px-1.5 py-0.5 rounded text-sm font-mono">
