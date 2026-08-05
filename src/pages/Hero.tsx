@@ -1,56 +1,80 @@
 import aboutData from '../data/about.json';
-import { Icon, Button } from '../components/ui';
+import { Button, Text } from '../components/ui';
 
 const Hero = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center pt-16 bg-neutral-950"
+      className="h-screen flex flex-col justify-center pt-20 px-6 sm:px-12 lg:px-28"
     >
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-100 mb-6">
-          Hi, I'm <span className="text-blue-400">{aboutData.name}</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-6">{aboutData.title}</p>
-        <p className="text-lg text-gray-400 mb-6 max-w-2xl mx-auto">{aboutData.bio}</p>
-
-        <div className="flex flex-wrap gap-6 justify-center mb-6">
-          <div className="flex items-center gap-2 text-gray-400">
-            <Icon name="Mail" size="sm" tone="info" />
-            <span>{aboutData.email}</span>
+      <div className="flex flex-col items-start gap-6 w-full max-w-3xl mx-auto">
+        {/* Avatar — sits just above the heading, centered */}
+        <div className="self-center mb-2">
+          <div className="block lg:hidden">
+            <div className="avatar-pixel">
+              <img
+                src="/images/pixel-me-short.png"
+                alt="Chris's pixel avatar"
+                className="h-24 w-auto"
+              />
+            </div>
           </div>
-          <div className="flex items-center gap-2 text-gray-400">
-            <Icon name="MapPin" size="sm" tone="info" />
-            <span>{aboutData.location}</span>
+          <div className="hidden lg:block">
+            <div className="avatar-pixel">
+              <img
+                src="/images/pixel-me-tall.png"
+                alt="Chris's pixel avatar"
+                className="h-52 w-auto"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-6 justify-center mb-6">
+        <Text display="h2">Hi, I'm Chris.</Text>
+
+        <Text display="body" className="text-gray-300">
+          {aboutData.bio}
+        </Text>
+
+        <div className="ml-16 flex flex-col items-start gap-2">
+          <Text display="caption" className="text-gray-400">
+            {aboutData.email}
+          </Text>
+          <Text display="caption" className="text-gray-400">
+            {aboutData.location}
+          </Text>
+          {aboutData.techStack.length > 0 && (
+            <div className="flex flex-row items-center gap-2">
+              {aboutData.techStack.map((tech, i) => (
+                <>
+                  <Text key={tech} display="callout">
+                    {tech}
+                  </Text>
+                  {i < aboutData.techStack.length - 1 && (
+                    <Text key={`sep-${i}`} display="caption" className="text-gray-400">
+                      |
+                    </Text>
+                  )}
+                </>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-4 flex flex-col md:flex-row md:items-center gap-6">
           <Button
             display="link"
-            href="/docs/Chris-Vo_resume-02-2026.pdf"
-            download
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+            href={aboutData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Icon name="Download" size="sm" tone="info" />
-            <span>Download resume here</span>
+            <span className="font-pixelify-sans text-[20px] font-bold">LinkedIn</span>
           </Button>
-        </div>
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Button
-            display="fill"
-            href="#projects"
-            className="bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-          >
-            View My Work
+          <Button display="link" href={aboutData.github} target="_blank" rel="noopener noreferrer">
+            <span className="font-pixelify-sans text-[20px] font-bold">GitHub</span>
           </Button>
-          <Button
-            display="outline"
-            href="#contact"
-            className="bg-neutral-900 text-blue-400 hover:bg-neutral-800 transition-colors"
-          >
-            Get In Touch
+          <Button href="/docs/Chris-Vo_resume-04-2026.pdf" download>
+            <span className="font-pixelify-sans text-[20px] font-bold">Resume</span>
           </Button>
         </div>
       </div>

@@ -1,26 +1,28 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Button, Icon } from './ui';
 
-const Navbar = () => {
+export type NavLinkItemType = {
+  label: string;
+  href: string;
+};
+
+export type NavbarProps = {
+  logo: ReactNode;
+  navLinks: NavLinkItemType[];
+};
+
+const Navbar = ({ logo, navLinks }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
-  ];
-
   return (
-    <header className="shadow-md fixed top-0 left-0 right-0 z-40 bg-neutral-950 bg-opacity-90">
+    <header className="shadow-md fixed top-0 left-0 right-0 z-40 rw-navbar">
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold">
-            <img className="h-6 w-auto" src="/w-logo.png" alt="Logo" />
-          </a>
+          <a href="/">{logo}</a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-16">
+            {/* Nav links */}
             {navLinks.map((link) => (
               <Button
                 key={link.href}
@@ -28,24 +30,23 @@ const Navbar = () => {
                 href={link.href}
                 className="font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
-                {link.label}
+                <span className="font-pixelify-sans text-[20px] font-bold">{link.label}</span>
               </Button>
             ))}
-            <Button
-              display="link"
-              href="/docs/Chris-Vo_resume-04-2026.pdf"
-              download
-              className="font-medium text-gray-300 hover:text-gray-100 transition-colors flex items-center gap-2"
-            >
-              <Icon name="FileText" /> Resume
+
+            {/* Resume */}
+            <Button href="/docs/Chris-Vo_resume-04-2026.pdf" download>
+              <span className="font-pixelify-sans text-[20px] font-bold">Resume</span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <Button
-            className="md:hidden text-gray-300"
+            className="lg:hidden text-gray-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
           >
             <Icon name={isMenuOpen ? 'X' : 'Menu'} />
           </Button>
@@ -53,24 +54,23 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gray-700">
+          <div id="mobile-nav" className="lg:hidden mt-4 py-4 border-t border-gray-700">
             {navLinks.map((link) => (
               <Button
                 key={link.href}
                 display="link"
                 href={link.href}
-                className="block py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors"
+                className="block w-full text-left font-medium text-gray-300 hover:text-gray-100 transition-colors"
               >
-                {link.label}
+                <span className="font-pixelify-sans text-[20px] font-bold">{link.label}</span>
               </Button>
             ))}
             <Button
-              display="link"
-              href="/docs/Chris-Vo_resume-02-2026.pdf"
+              href="/docs/Chris-Vo_resume-04-2026.pdf"
               download
-              className="flex py-2 font-medium text-gray-300 hover:text-gray-100 transition-colors items-center gap-2"
+              className="block w-full text-left font-medium text-gray-300 hover:text-gray-100 transition-colors mt-2"
             >
-              <Icon name="FileText" /> Resume
+              <span className="font-pixelify-sans text-[20px] font-bold">Resume</span>
             </Button>
           </div>
         )}
@@ -78,4 +78,5 @@ const Navbar = () => {
     </header>
   );
 };
+
 export default Navbar;

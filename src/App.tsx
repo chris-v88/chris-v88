@@ -1,21 +1,14 @@
-import Navbar from './components/Navbar';
-
 import Hero from './pages/Hero';
-import { Experience } from './pages/Experience';
-import RewriteExperience from './rewrite_pages/RewriteExperience';
-import { Projects } from './pages/Projects';
-import RewriteProjects from './rewrite_pages/RewriteProjects';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import RewriteContact from './rewrite_pages/RewriteContact';
 import Footer from './components/Footer';
-import RewriteFooter from './components/rewrite/RewriteFooter';
 import Config from './pages/Config';
 import Docs from './pages/Docs';
 import FeatureFlag from './components/FeatureFlag';
-import RewriteNavbar from './components/rewrite/RewriteNavbar';
-import { isFlagActive, Flag } from './utils/featureFlags';
+import Navbar from './components/Navbar';
+import { Flag } from './utils/featureFlags';
 import { PixelIcon, Text } from './components/ui';
-import RewriteHero from './rewrite_pages/RewriteHero';
 import { useState } from 'react';
 import Wiki from './pages/Wiki';
 
@@ -44,43 +37,18 @@ const App = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
   ];
-
-  const isRewrite = isFlagActive(Flag.ENABLE_REWRITE_2026);
   // const isHiddenLinkEnabled = isFlagActive(Flag.ENABLE_HIDDEN_LINK);
 
   return (
-    <div className={`min-h-screen flex flex-col ${isRewrite ? 'rw-theme' : 'dark bg-black'}`}>
-      <FeatureFlag
-        name={Flag.ENABLE_REWRITE_2026}
-        feature={<RewriteNavbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />}
-        backup={<Navbar />}
-      />
+    <div className="min-h-screen flex flex-col rw-theme">
+      <Navbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />
       <main className="flex-grow">
-        <FeatureFlag
-          name={Flag.ENABLE_REWRITE_2026}
-          feature={
-            <>
-              <RewriteHero />
-              <RewriteExperience />
-              <RewriteProjects />
-              <RewriteContact />
-            </>
-          }
-          backup={
-            <>
-              <Hero />
-              <Experience />
-              <Projects />
-              <Contact />
-            </>
-          }
-        />
+        <Hero />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
-      <FeatureFlag
-        name={Flag.ENABLE_REWRITE_2026}
-        feature={<RewriteFooter />}
-        backup={<Footer />}
-      />
+      <Footer />
       <FeatureFlag
         name={Flag.ENABLE_HIDDEN_LINK}
         feature={
