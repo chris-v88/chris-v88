@@ -1,7 +1,6 @@
 import Hero from './pages/Hero';
 import Experience from './pages/Experience';
-import { Projects } from './pages/Projects';
-import RewriteProjects from './rewrite_pages/RewriteProjects';
+import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import RewriteContact from './rewrite_pages/RewriteContact';
 import Footer from './components/Footer';
@@ -54,13 +53,12 @@ const App = () => {
             <>
               <Hero />
               <Experience />
-              <RewriteProjects />
+              <Projects />
               <RewriteContact />
             </>
           }
           backup={
             <>
-              <Projects />
               <Contact />
             </>
           }
