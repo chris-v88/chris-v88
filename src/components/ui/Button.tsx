@@ -1,6 +1,5 @@
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
 import { toneStyles } from './colors';
-import { isFlagActive, Flag } from '../../utils/featureFlags';
 
 export type ButtonTone = 'info' | 'success' | 'caution' | 'warning' | 'neutral' | 'primary';
 export type ButtonDisplay = 'fill' | 'outline' | 'ghost' | 'link' | 'ghost-icon' | 'menu';
@@ -28,11 +27,9 @@ const displayStyles: Record<ButtonDisplay, string> = {
 
 const PIXEL_DISPLAYS: ButtonDisplay[] = ['fill', 'outline', 'menu'];
 
-const isRewrite = () => isFlagActive(Flag.ENABLE_REWRITE_2026);
-
 export const Button = (props: ButtonProps) => {
   const {
-    tone = isRewrite() ? 'primary' : 'info',
+    tone = 'primary',
     display = 'fill',
     children,
     className,
@@ -48,7 +45,7 @@ export const Button = (props: ButtonProps) => {
     'cursor-pointer transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const displayClass = displayStyles[display];
   const toneClass = toneStyles[tone][display];
-  const pixelClass = PIXEL_DISPLAYS.includes(display) && isRewrite() ? 'btn-pixel px-6 py-3' : '';
+  const pixelClass = PIXEL_DISPLAYS.includes(display) ? 'btn-pixel px-6 py-3' : '';
 
   const combinedClassName = [baseClasses, displayClass, toneClass, pixelClass, className]
     .filter(Boolean)

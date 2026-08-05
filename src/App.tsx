@@ -8,7 +8,7 @@ import Config from './pages/Config';
 import Docs from './pages/Docs';
 import FeatureFlag from './components/FeatureFlag';
 import Navbar from './components/Navbar';
-import { isFlagActive, Flag } from './utils/featureFlags';
+import { Flag } from './utils/featureFlags';
 import { PixelIcon, Text } from './components/ui';
 import { useState } from 'react';
 import Wiki from './pages/Wiki';
@@ -38,12 +38,10 @@ const App = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
   ];
-
-  const isRewrite = isFlagActive(Flag.ENABLE_REWRITE_2026);
   // const isHiddenLinkEnabled = isFlagActive(Flag.ENABLE_HIDDEN_LINK);
 
   return (
-    <div className={`min-h-screen flex flex-col ${isRewrite ? 'rw-theme' : 'dark bg-black'}`}>
+    <div className="min-h-screen flex flex-col rw-theme">
       <Navbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />
       <main className="flex-grow">
         <Hero />
