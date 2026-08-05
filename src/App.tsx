@@ -1,6 +1,5 @@
 import Hero from './pages/Hero';
-import { Experience } from './pages/Experience';
-import RewriteExperience from './rewrite_pages/RewriteExperience';
+import Experience from './pages/Experience';
 import { Projects } from './pages/Projects';
 import RewriteProjects from './rewrite_pages/RewriteProjects';
 import Contact from './pages/Contact';
@@ -54,15 +53,13 @@ const App = () => {
           feature={
             <>
               <Hero />
-              <RewriteExperience />
+              <Experience />
               <RewriteProjects />
               <RewriteContact />
             </>
           }
           backup={
             <>
-              <Hero />
-              <Experience />
               <Projects />
               <Contact />
             </>
