@@ -2,7 +2,6 @@ import Hero from './pages/Hero';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import RewriteContact from './rewrite_pages/RewriteContact';
 import Footer from './components/Footer';
 import RewriteFooter from './components/rewrite/RewriteFooter';
 import Config from './pages/Config';
@@ -47,22 +46,10 @@ const App = () => {
     <div className={`min-h-screen flex flex-col ${isRewrite ? 'rw-theme' : 'dark bg-black'}`}>
       <Navbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />
       <main className="flex-grow">
-        <FeatureFlag
-          name={Flag.ENABLE_REWRITE_2026}
-          feature={
-            <>
-              <Hero />
-              <Experience />
-              <Projects />
-              <RewriteContact />
-            </>
-          }
-          backup={
-            <>
-              <Contact />
-            </>
-          }
-        />
+        <Hero />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
       <FeatureFlag
         name={Flag.ENABLE_REWRITE_2026}
