@@ -13,7 +13,6 @@ import FeatureFlag from './components/FeatureFlag';
 import Navbar from './components/Navbar';
 import { isFlagActive, Flag } from './utils/featureFlags';
 import { PixelIcon, Text } from './components/ui';
-import RewriteHero from './rewrite_pages/RewriteHero';
 import { useState } from 'react';
 import Wiki from './pages/Wiki';
 
@@ -54,7 +53,7 @@ const App = () => {
           name={Flag.ENABLE_REWRITE_2026}
           feature={
             <>
-              <RewriteHero />
+              <Hero />
               <RewriteExperience />
               <RewriteProjects />
               <RewriteContact />
