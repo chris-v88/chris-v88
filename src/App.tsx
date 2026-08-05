@@ -3,7 +3,6 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
-import RewriteFooter from './components/rewrite/RewriteFooter';
 import Config from './pages/Config';
 import Docs from './pages/Docs';
 import FeatureFlag from './components/FeatureFlag';
@@ -49,11 +48,7 @@ const App = () => {
         <Projects />
         <Contact />
       </main>
-      <FeatureFlag
-        name={Flag.ENABLE_REWRITE_2026}
-        feature={<RewriteFooter />}
-        backup={<Footer />}
-      />
+      <Footer />
       <FeatureFlag
         name={Flag.ENABLE_HIDDEN_LINK}
         feature={
