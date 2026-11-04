@@ -1,47 +1,41 @@
+import type { ComponentType } from 'react';
 import Hero from './pages/Hero';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Footer from './components/Footer';
 import Config from './pages/Config';
 import Docs from './pages/Docs';
+import Wiki from './pages/Wiki';
+import Footer from './components/Footer';
 import FeatureFlag from './components/FeatureFlag';
+import HiddenMenu from './components/HiddenMenu';
 import Navbar from './components/Navbar';
 import { Flag } from './utils/featureFlags';
-import { PixelIcon, Text } from './components/ui';
-import { useState } from 'react';
-import Wiki from './pages/Wiki';
+import { Text } from './components/ui';
+
+const STANDALONE_PAGES: Record<string, ComponentType> = {
+  '/config': Config,
+  '/wiki': Wiki,
+  '/docs': Docs,
+};
+
+const NAV_LINKS = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
 
 const App = () => {
-  const pathname = window.location.pathname;
-  const [lockOpen, setLockOpen] = useState(false);
+  const StandalonePage = STANDALONE_PAGES[window.location.pathname];
 
-  if (pathname === '/config') {
-    return <Config />;
+  if (StandalonePage) {
+    return <StandalonePage />;
   }
-
-  if (pathname === '/wiki') {
-    return <Wiki />;
-  }
-
-  if (pathname === '/docs') {
-    return <Docs />;
-  }
-
-  const hiddenLinkClass = `rounded-full ${lockOpen ? 'bg-white/20' : 'bg-white/5'} px-4 py-2 text-sm text-white backdrop-blur-sm ${lockOpen ? 'opacity-100' : 'opacity-30'} transition hover:opacity-100 hover:bg-white/30`;
-  const lockIconClass = `fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm ${lockOpen ? 'opacity-100' : 'opacity-30'} transition hover:opacity-100 hover:bg-white/30`;
-
-  const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
-  ];
-  // const isHiddenLinkEnabled = isFlagActive(Flag.ENABLE_HIDDEN_LINK);
 
   return (
     <div className="min-h-screen flex flex-col rw-theme">
-      <Navbar logo={<Text display="h1">Chris Vo</Text>} navLinks={navLinks} />
+      <Navbar logo={<Text display="h1">Chris Vo</Text>} navLinks={NAV_LINKS} />
       <main className="flex-grow">
         <Hero />
         <Experience />
@@ -49,30 +43,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-      <FeatureFlag
-        name={Flag.ENABLE_HIDDEN_LINK}
-        feature={
-          <div>
-            {lockOpen && (
-              <div className="fixed bottom-20 right-6 z-50 flex flex-col items-end gap-2">
-                <a href="/config" className={hiddenLinkClass}>
-                  Config
-                </a>
-                <a href="/wiki" className={hiddenLinkClass}>
-                  Wiki
-                </a>
-              </div>
-            )}
-            <button
-              // className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-sm opacity-30 transition hover:opacity-100 hover:bg-white/30"
-              className={lockIconClass}
-              onClick={() => setLockOpen(!lockOpen)}
-            >
-              <PixelIcon name={lockOpen ? 'lock-unlocked' : 'lock-locked'} className="h-6 w-6" />
-            </button>
-          </div>
-        }
-      />
+      <FeatureFlag name={Flag.ENABLE_HIDDEN_LINK} feature={<HiddenMenu />} />
     </div>
   );
 };

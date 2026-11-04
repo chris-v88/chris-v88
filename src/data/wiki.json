@@ -17,6 +17,24 @@
       "link": "https://cpp-n-juce.netlify.app/",
       "description": "A C++ and JUCE-based full-stack concept for music software development, showcasing audio processing capabilities.",
       "stack": ["C++", "JUCE", "SQL", "AWS"]
+    },
+    {
+      "name": "The Bar Wiki",
+      "link": "https://thebarwiki.netlify.app/",
+      "description": "A comprehensive wiki for The Bar, providing detailed information and guides for users.",
+      "stack": [""]
+    },
+    {
+      "name": "Python Related Lessons",
+      "link": "https://python-prepin.netlify.app/",
+      "description": "A collection of Python-related lessons and tutorials for users.",
+      "stack": ["Python", "Flask", "Django", "Tornado", "SQL"]
+    },
+    {
+      "name": "Comprehensive Linux Guide",
+      "link": "https://linux-plus.netlify.app/",
+      "description": "A comprehensive guide for Linux users, covering various topics and tutorials.",
+      "stack": ["Linux", "Bash", "Shell"]
     }
   ]
 }
